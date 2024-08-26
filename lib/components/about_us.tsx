@@ -32,12 +32,12 @@ const AboutUs = () => {
   return (
     <>
     <Flex w={'100%'} flexDir={'column'} h={'100%'} alignItems={'center'} justifyContent={'center'}>
-      <Flex maxW={CONTENT_MAX_WIDTH} flexDir={'column'} alignItems={'center'}   my={SECTION_MARGIN_Y} px={SECTION_PADDING_X} gap={'20px'}>
-        <Heading textAlign={'center'} color={APP_BG} fontSize={SECTION_HEADING_FONT_SIZE}>ABOUT US</Heading>
+      <Flex maxW={CONTENT_MAX_WIDTH} flexDir={'column'} w={'100%'} alignItems={'center'}   my={SECTION_MARGIN_Y} px={SECTION_PADDING_X} >
+        <Heading textAlign={'center'} color={APP_BG} fontSize={SECTION_HEADING_FONT_SIZE} mb={SECTION_MARGIN_Y}>ABOUT US</Heading>
 
-        <Flex flexDir={['column','column','row','row','row']} h={'100%'} w={'100%'}  gap={'50px'}>
+        <Flex flexDir={['column','column','row','row','row']} h={'100%'} w={'100%'}  gap={'40px'}>
 
-          <Flex flexDir={'column'}  fontSize={TEXT_FONT_SIZE}  gap={'10px'} w={'100%'} h={'100%'} >
+          <Flex flexDir={'column'}  fontSize={TEXT_FONT_SIZE}  gap={'10px'} w={'100%'} h={'100%'} order={[2,2,1]}>
             <Text >We are an Australia wide Asset Management, FM, projects and sustainable advisory company who value Precision, Reliability and Integrity.</Text>
             <Text >We can help you embed sustainability in every facet of your strategy and operations, to address everything from energy and emissions to investments and due diligence. Our sustainability consulting expertise extends to plastics recycling and sustainable materials, sustainable food systems, supply chain optimization, and diversity, equity, and inclusion.</Text>
             <Text>Our experience shows that vision and pragmatism go hand in hand. We can help you root sustainability in your core strategy, helping you translate ambitious goals into practical, actionable plans that get results.</Text>
@@ -47,8 +47,8 @@ const AboutUs = () => {
           {/* <Flex maxW={'1100px'} maxH={'1000px'} w={'100%'} h={'100%'} backgroundImage={'/images/About Us.jpg'} backgroundPosition={'center'} backgroundSize={'cover'} backgroundRepeat={'no-repeat'}>
           </Flex>*/}
 
-          <Flex position={'relative'}   w={'100%'} h={'100%'}  >
-            <Image src={'/images/About Us.jpg'}  alt="logo"  style={{ objectFit: 'contain' }} />
+          <Flex position={'relative'} w={'100%'} h={'100%'} minH={'400px'}  order={[1,1,2]}>
+            <Image src={'/images/About Us.jpg'}  alt="logo"  style={{ objectFit: 'cover' }} />
           </Flex>
         </Flex>
       </Flex>

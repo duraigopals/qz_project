@@ -1,13 +1,35 @@
-
-import { Box, Button, Flex, Heading, Text, VStack } from '@chakra-ui/react';
+"use client"
+import { Box, Button, Flex, Heading, Spinner, Text, VStack } from '@chakra-ui/react';
 import { APP_BG, CONTENT_MAX_WIDTH, HEADER_BG, SECTION_HEADING_FONT_SIZE, SECTION_MARGIN_Y, SECTION_PADDING_X, TEXT_COLOR, TEXT_FONT_SIZE } from './app_constants';
 import Link from 'next/link';
 import ContactUs from './contact_us';
+import { useState, useEffect } from 'react';
 
 
 
  const HomePage = () => {
-  
+  const [loading, setLoading] = useState<boolean>(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 1500);
+  }, [])
+
+  if(loading){
+    return(
+      <Flex h={'100vh'} w={'100vw'} bg={'white'} justifyContent={'center'} alignItems={'center'}>
+      <Spinner
+        thickness='4px'
+        speed='0.65s'
+        emptyColor='gray.200'
+        color={HEADER_BG}
+        size='xl'
+        width={'50px'}
+        height={'50px'}
+      />
+    </Flex>
+    )
+  }
   return (
     <>
     <Box position="relative" height="628px" overflow="hidden" justifyContent={'center'}>
@@ -56,8 +78,8 @@ import ContactUs from './contact_us';
     </Box>
 
     <Flex w={'100%'} justifyContent={'center'}>
-      <Flex maxW={CONTENT_MAX_WIDTH} flexDir={'column'} alignItems={'center'}   my={SECTION_MARGIN_Y} px={SECTION_PADDING_X} gap={'20px'}>
-        <Heading textAlign={'center'} color={APP_BG} fontSize={SECTION_HEADING_FONT_SIZE}>QZ SUSTAINABILITY & <br />ASSET MANAGEMENT SERVICES</Heading>
+      <Flex maxW={CONTENT_MAX_WIDTH} flexDir={'column'} alignItems={'center'}   my={SECTION_MARGIN_Y} px={SECTION_PADDING_X} >
+        <Heading textAlign={'center'} color={APP_BG} fontSize={SECTION_HEADING_FONT_SIZE} mb={SECTION_MARGIN_Y}>QZ SUSTAINABILITY & <br />ASSET MANAGEMENT SERVICES</Heading>
         <Flex flexDir={'column'} gap={'10px'}>
           <Text fontSize={TEXT_FONT_SIZE} >We are an Australia wide Asset Management, Facilities Management, Projects Management and sustainability advisory company who value Precision, Reliability and Integrity.</Text>
           <Text fontSize={TEXT_FONT_SIZE} >We can help you to embed sustainability in every facet of your strategy and operations, to address everything from energy and emissions to investments and due diligence. Our sustainability consulting expertise extends to commercial buildings and diversity, equity, and inclusion.</Text>

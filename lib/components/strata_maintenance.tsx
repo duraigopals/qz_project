@@ -3,7 +3,7 @@ import { Flex, Heading, Spinner, Text } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react'
 import ContactUs from './contact_us';
 import Image from 'next/image';
-import { HEADER_BG } from './app_constants';
+import { APP_BG, CONTENT_MAX_WIDTH, HEADER_BG, SECTION_HEADING_FONT_SIZE, SECTION_MARGIN_Y, SECTION_PADDING_X, SECTION_SUB_HEADING_FONT_SIZE, TEXT_FONT_SIZE } from './app_constants';
 
 const StrataMaintenance = () => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -29,24 +29,24 @@ const StrataMaintenance = () => {
     )
   }
   return (
-    <>
-    <Flex m={6} p={[5,10]} flexDir={'column'} alignItems={'center'} justifyContent={'center'} gap={'20px'}>
-      <Flex  flexDir={'column'} alignItems={'center'} justifyContent={'center'}>
-        <Heading fontSize={['10px','15px','20px','30px']}>Strata Maintenance – Residential properties</Heading>
+    <Flex flexDir={'column'} w={'100%'} h={'100%'}>
+      <Flex w={'100%'}  justifyContent={'center'}>
+
+        <Flex maxW={CONTENT_MAX_WIDTH} flexDir={'column'} alignItems={'center'} w={'100%'}  my={SECTION_MARGIN_Y} px={SECTION_PADDING_X} >
+          <Heading textAlign={'center'} color={APP_BG} fontSize={SECTION_HEADING_FONT_SIZE} mb={SECTION_MARGIN_Y}>Strata Maintenance – Residential Properties</Heading>
+
+          <Flex flexDir={['column','column','column','row','row']} gap={'30px'}>
+            <Flex position={'relative'} w={'100%'} h={'100%'} minH={'400px'} >
+              <Image src = {'/images/Strata Maintanence.jpg'} priority = {true} alt="logo" fill style = {{ objectFit: 'cover' }} />
+            </Flex>
+            <Flex flexDir={'column'} w={'100%'} h={'100%'} gap={'10px'} fontSize={TEXT_FONT_SIZE}>
+              <Text >For repairs and maintenance in a strata scheme, as a general rule the owner’s corporation are responsible for common property and the owners must deal with anything within their lot. Owner’s corporations have a positive legal responsibility to keep common property in good order and repair.  We can provide defects reports, technical due diligence to strata committee and quote for yearly maintenance of building services.</Text>
+            </Flex>
+          </Flex>
+        </Flex>
       </Flex>
-
-      <Flex position={'relative'} mt={'20px'}  w = {'100%'}  h = '100%' minH={"400px"}>
-        <Image src = {'/images/Strata Maintanence.jpg'} priority = {true} alt="logo" fill style = {{ objectFit: 'contain' }} />
-
-      </Flex>
-
-
-      <Flex flexDir={'column'} w={'100%'}  justifyContent={'center'} alignItems={'center'} gap={'20px'} mt={[3,'50px']}>
-        <Text fontSize={['12px','15px']}>For repairs and maintenance in a strata scheme, as a general rule the owner’s corporation are responsible for common property and the owners must deal with anything within their lot. Owner’s corporations have a positive legal responsibility to keep common property in good order and repair.  We can provide defects reports, technical due diligence to strata committee and quote for yearly maintenance of building services..</Text>
-      </Flex>
+      <ContactUs />
     </Flex>
-    <ContactUs />
-    </>
   );
 }
 

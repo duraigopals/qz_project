@@ -13,15 +13,11 @@ interface request {
     };
 }
 
-export  async function POST (req:NextApiRequest,res:NextResponse) {
-  const {email,subject,message} = req.body;
-  console.log("Email ",email);
-   /*  if (req.method === 'POST') { */
-  console.log(req)
-   const data = await req.body
-   console.log(data,"data")
-      //  /* const message  = req.body.message */
 
+
+export  async function POST (req:NextRequest,res:NextResponse) {
+  const {email,subject,message} =await req.json();
+  console.log("Email ",email,subject,message);
 
         // Create a transporter object using SMTP
         const transporter = nodemailer.createTransport({
@@ -35,14 +31,15 @@ export  async function POST (req:NextApiRequest,res:NextResponse) {
         });
 
         // Email options
-        const mailOptions = {
-            from:"admin@qzsustainability.com.au", // Sender address
-            to: "krishnamural048@gmail.com", // List of receivers
-            subject: "123", // Subject line
-            text:"" , // Plain text body
-        };
+        
    
         try {
+          const mailOptions = email && subject && message && {
+            from:`${email}`, // Sender address
+            to: "duraigopal9360@gmail.com", // List of receivers
+            subject: `${subject}`, // Subject line
+            text:`${message}` , // Plain text body
+        };
             // Send the email
            let res1 = await transporter.sendMail(mailOptions);
            console.log(res1)

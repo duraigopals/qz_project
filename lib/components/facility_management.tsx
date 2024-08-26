@@ -8,7 +8,7 @@ import { APP_BG, CONTENT_MAX_WIDTH, HEADER_BG, LIST_HEADING_FONT_SIZE, SECTION_H
 
 const FacilityManagement = () => {
 
-  const [loading, setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
   useEffect(() => {
     setTimeout(() => {
       setLoading(false)
@@ -34,16 +34,16 @@ const FacilityManagement = () => {
     <Flex flexDir={'column'} w={'100%'} h={'100%'}>
       <Flex w={'100%'}  justifyContent={'center'}>
 
-        <Flex maxW={CONTENT_MAX_WIDTH} flexDir={'column'} alignItems={'center'}   my={SECTION_MARGIN_Y} px={SECTION_PADDING_X} gap={'20px'}>
+        <Flex maxW={CONTENT_MAX_WIDTH} flexDir={'column'} alignItems={'center'}  w={'100%'}  my={SECTION_MARGIN_Y} px={SECTION_PADDING_X}>
 
           <Heading textAlign={'center'} color={APP_BG} fontSize={SECTION_HEADING_FONT_SIZE} >Facilities Management Consultancy</Heading>
-          <Flex flexDir={'column'} fontSize={TEXT_FONT_SIZE} mb={'40px'} gap={'10px'}>
+          <Flex flexDir={'column'} fontSize={TEXT_FONT_SIZE} mb={'40px'} gap={'10px'} my={SECTION_MARGIN_Y}>
             <Text>Our team of experts will provide you independent and ethical recommendations on the best solutions for your Facility Management and Asset Management needs.</Text>
             <Text>Facilities Management must align with the business core mission vision and values. Our team work with our clients to improve the facility business process management from facilities contract review and procurement to building compliance.</Text>
             <Text >We analyse different Facility Management cross-business processes to help you with strategic decision-making on pre and post contracts and DLP management advice / plan…</Text>
           </Flex>
 
-          <SimpleGrid columns={6} columnGap={'20px'} rowGap={'20px'}  >
+          <SimpleGrid columns={6} columnGap={'40px'} rowGap={'40px'} w={'100%'} >
 
             <GridItem colSpan={[6, 6, 3]} >
               <Flex flexDir={'column'} h={'100%'}  gap={'10px'}>
@@ -72,7 +72,7 @@ const FacilityManagement = () => {
 
             <GridItem colSpan={[6, 6, 3]} >
               <Flex flexDir={'column'} h={'100%'}  gap={'10px'}>
-                <Heading fontSize={LIST_HEADING_FONT_SIZE}>Due diligence and pre-purchase inspection studies</Heading>
+                <Heading fontSize={LIST_HEADING_FONT_SIZE}>Due Diligence and Pre-Purchase Inspection Studies</Heading>
                 <Text fontSize={TEXT_FONT_SIZE}>Due diligence inspections are important to both building purchasers and tenants, they assist with the identification and management of risk.  The team at QZ Sustainability are specialists in building condition audits and due diligence studies.  We have required project management, financial, technical, inspection and reporting skills to provide accurate and timely reports of value to building managers, vendors and prospective purchasers.</Text>
               </Flex>
             </GridItem>
@@ -80,7 +80,7 @@ const FacilityManagement = () => {
 
             <GridItem colSpan={[6, 6, 3]} >
               <Flex flexDir={'column'} h={'100%'}  gap={'10px'}>
-                <Heading fontSize={LIST_HEADING_FONT_SIZE}>Asset management and life cycle costing</Heading>
+                <Heading fontSize={LIST_HEADING_FONT_SIZE}>Asset Management and Life Cycle Costing</Heading>
                 <Text fontSize={TEXT_FONT_SIZE}>Asset management is best summarized as maximizing the performance of the asset throughout its entire life.  Life cycle costing is an economic assessment of alternatives, considering all of the significant costs of ownership over the economic life of the facility.</Text>
               </Flex>
             </GridItem>

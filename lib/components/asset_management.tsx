@@ -7,7 +7,7 @@ import ContactUs from './contact_us';
 import { APP_BG, CONTENT_MAX_WIDTH, HEADER_BG, LIST_HEADING_FONT_SIZE, SECTION_HEADING_FONT_SIZE, SECTION_MARGIN_Y, SECTION_PADDING_X, TEXT_FONT_SIZE } from './app_constants';
 
 const AssetManagement = () => {
-  const [loading, setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
   useEffect(() => {
     setTimeout(() => {
       setLoading(false)
@@ -32,12 +32,12 @@ const AssetManagement = () => {
   return (
     <Flex flexDir={'column'} w={'100%'} h={'100%'}>
       <Flex w={'100%'} justifyContent={'center'}>
-        <Flex maxW={CONTENT_MAX_WIDTH} flexDir={'column'} alignItems={'center'}   my={SECTION_MARGIN_Y} px={SECTION_PADDING_X} gap={'20px'}>
-          <Heading textAlign={'center'} color={APP_BG} fontSize={SECTION_HEADING_FONT_SIZE} mb={'40px'}>QZ SUSTAINABILITY & <br />ASSET MANAGEMENT SERVICES</Heading>
-            <SimpleGrid columns={6} columnGap={'20px'} rowGap={'20px'}  >
+        <Flex maxW={CONTENT_MAX_WIDTH} flexDir={'column'} alignItems={'center'}  w={'100%'}  my={SECTION_MARGIN_Y} px={SECTION_PADDING_X} >
+          <Heading textAlign={'center'} color={APP_BG} fontSize={SECTION_HEADING_FONT_SIZE} mb={SECTION_MARGIN_Y}>QZ Sustainability & <br />Asset Management Services</Heading>
+            <SimpleGrid columns={6} columnGap={'40px'} rowGap={'40px'}  w={'100%'} >
 
               <GridItem colSpan={[6,6,3]} >
-                <Flex flexDir={'column'} h={'100%'}  gap={'10px'}>
+                <Flex flexDir={'column'} h={'100%'}  gap={'10px'} order={[2,2,1]}>
                   <Heading fontSize={LIST_HEADING_FONT_SIZE}>Asset & Facilities Management Business Processes</Heading>
                   <UnorderedList fontSize={TEXT_FONT_SIZE} >
                     <ListItem>Strategic Asset Management objectives and Plans</ListItem>
@@ -59,13 +59,13 @@ const AssetManagement = () => {
                 {/* <Flex maxW={'1100px'} h={'500px'} w={'100%'}  backgroundImage={'/images/asset_management1.jpg'} backgroundPosition={'center'} backgroundSize={'cover'} backgroundRepeat={'no-repeat'}>
                 </Flex> */}
 
-                <Flex position={'relative'} w={'100%'} h={'100%'} minH={'400px'}>
+                <Flex position={'relative'} w={'100%'} h={'100%'} minH={'400px'} order={[1,1,2]}>
                   <Image src={'/images/Asset_1.jpg'} priority={true} alt="logo" fill style={{ objectFit: 'fill'}} />
                 </Flex>
               </GridItem>
 
 
-              <GridItem colSpan={[6,6,3]}>
+              <GridItem colSpan={[6,6,3]} >
               {/*  <Flex maxW={'1100px'} h={'400px'} w={'100%'} backgroundImage={'/images/standard-quality-control-concept-m.jpg'} backgroundPosition={'center'} backgroundSize={'cover'} backgroundRepeat={'no-repeat'}>
                 </Flex> */}
 
@@ -115,7 +115,7 @@ const AssetManagement = () => {
             
           
               <GridItem colSpan={[6,6,3]} >
-                <Flex flexDir={'column'}  w={'100%'} height={'100%'} gap={'20px'} >
+                <Flex flexDir={'column'}  w={'100%'} height={'100%'} gap={'20px'} order={[4,4,3]} >
                   <Flex flexDir={'column'} gap={'10px'}>
                     <Heading fontSize={LIST_HEADING_FONT_SIZE}>Commercial Practices</Heading>
                     <UnorderedList fontSize={TEXT_FONT_SIZE}>
@@ -143,7 +143,7 @@ const AssetManagement = () => {
               {/* <Flex maxW={'1100px'} h={'400px'} w={'100%'}  backgroundImage={'/images/succesful-business-man-presenting-good-evolution-company-using-digital-tablet.jpg'} backgroundPosition={'center'} backgroundSize={'cover'} backgroundRepeat={'no-repeat'}>
               </Flex> */}
 
-                <Flex position={'relative'} w={'100%'} h={'100%'} minH={'400px'} >
+                <Flex position={'relative'} w={'100%'} h={'100%'} minH={'400px'} order={[3,3,4]}>
                   <Image src={'/images/Facilities Management.jpg'} priority={true} alt="logo" fill style={{ objectFit: 'fill' }} />
                 </Flex>
               </GridItem>
