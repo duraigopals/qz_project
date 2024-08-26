@@ -1,6 +1,6 @@
 
 import { Box, Button, Flex, Heading, Text, VStack } from '@chakra-ui/react';
-import { CONTENT_MAX_WIDTH, HEADER_BG, SECTION_HEADING_FONT_SIZE, SECTION_MARGIN_Y, SECTION_PADDING_X, TEXT_COLOR, TEXT_FONT_SIZE } from './app_constants';
+import { APP_BG, CONTENT_MAX_WIDTH, HEADER_BG, SECTION_HEADING_FONT_SIZE, SECTION_MARGIN_Y, SECTION_PADDING_X, TEXT_COLOR, TEXT_FONT_SIZE } from './app_constants';
 import Link from 'next/link';
 import ContactUs from './contact_us';
 
@@ -57,7 +57,7 @@ import ContactUs from './contact_us';
 
     <Flex w={'100%'} justifyContent={'center'}>
       <Flex maxW={CONTENT_MAX_WIDTH} flexDir={'column'} alignItems={'center'}   my={SECTION_MARGIN_Y} px={SECTION_PADDING_X} gap={'20px'}>
-        <Heading textAlign={'center'} fontSize={SECTION_HEADING_FONT_SIZE}>QZ SUSTAINABILITY & <br />ASSET MANAGEMENT SERVICES</Heading>
+        <Heading textAlign={'center'} color={APP_BG} fontSize={SECTION_HEADING_FONT_SIZE}>QZ SUSTAINABILITY & <br />ASSET MANAGEMENT SERVICES</Heading>
         <Flex flexDir={'column'} gap={'10px'}>
           <Text fontSize={TEXT_FONT_SIZE} >We are an Australia wide Asset Management, Facilities Management, Projects Management and sustainability advisory company who value Precision, Reliability and Integrity.</Text>
           <Text fontSize={TEXT_FONT_SIZE} >We can help you to embed sustainability in every facet of your strategy and operations, to address everything from energy and emissions to investments and due diligence. Our sustainability consulting expertise extends to commercial buildings and diversity, equity, and inclusion.</Text>

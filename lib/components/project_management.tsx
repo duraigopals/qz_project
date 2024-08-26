@@ -3,10 +3,10 @@ import { Flex, Heading, Spinner, Text } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react'
 import ContactUs from './contact_us';
 import Image from 'next/image';
-import { HEADER_BG } from './app_constants';
+import { APP_BG, CONTENT_MAX_WIDTH, HEADER_BG, SECTION_HEADING_FONT_SIZE, SECTION_MARGIN_Y, SECTION_PADDING_X, SECTION_SUB_HEADING_FONT_SIZE } from './app_constants';
 const ProjectManagement = () => {
 
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(false);
   useEffect(() => {
     setTimeout(() => {
       setLoading(false)
@@ -29,12 +29,11 @@ const ProjectManagement = () => {
     )
   }
   return (
-    <>
-    <Flex m={6} p={[5,10]} flexDir={'column'} alignItems={'center'} justifyContent={'center'} gap={'20px'}>
-      <Flex  flexDir={'column'} alignItems={'center'} justifyContent={'center'}>
-        <Heading fontSize={['20px','25px','30px','40px']}>Project Management</Heading>
-        <Heading fontSize={['10px','15px','20px','30px']}>(Fit Outs, Refurbishment Projects )</Heading>
-      </Flex>
+    <Flex flexDir={'column'} w={'100%'} h={'100%'}>
+      <Flex w={'100%'} justifyContent={'center'}>
+        <Flex maxW={CONTENT_MAX_WIDTH} flexDir={'column'} alignItems={'center'}   my={SECTION_MARGIN_Y} px={SECTION_PADDING_X} gap={'20px'}>
+          <Heading textAlign={'center'} color={APP_BG} fontSize={SECTION_HEADING_FONT_SIZE}>Project Management</Heading>
+          <Heading textAlign={'center'} color={APP_BG} fontSize={SECTION_SUB_HEADING_FONT_SIZE}>(Fit Outs, Refurbishment Projects )</Heading>
 
       <Flex position={'relative'} mt={'20px'}  w = {'100%'}  h = '100%' minH={"400px"}>
         <Image src = {'/images/Project Management.jpg'} priority = {true} alt="logo" fill style = {{ objectFit: 'contain' }} />
@@ -47,8 +46,9 @@ const ProjectManagement = () => {
         <Text fontSize={['12px','15px']}>We draw on industry-leading thinking and our strong digital platform gives our project managers access to the most current project templates, project data, knowledge and standards.</Text>
       </Flex>
     </Flex>
+    </Flex>
     <ContactUs />
-    </>
+    </Flex>
   );
 }
 

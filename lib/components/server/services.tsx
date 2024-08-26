@@ -1,18 +1,20 @@
+"use client"
 import { Flex, Heading, SimpleGrid, GridItem, Button, UnorderedList, ListItem, Text,Image } from '@chakra-ui/react';
 import React from 'react'
-import { HEADER_BG } from '../app_constants';
+import { APP_BG, CONTENT_MAX_WIDTH, HEADER_BG, SECTION_HEADING_FONT_SIZE, SECTION_MARGIN_Y, SECTION_PADDING_X, TEXT_FONT_SIZE } from '../app_constants';
 import { useRouter } from 'next/navigation';
 /* import Image from 'next/image'; */
 
 const Services = () => {
   const router  = useRouter()
   return (
-    <>
-      <Flex m={3} flexDir={'column'} alignItems={'center'} justifyContent={'center'} gap={'20px'}>
-        <Heading fontSize={['20px', '30px', '40px', '60px']}>Our Services</Heading>
+    <Flex w={'100%'} justifyContent={'center'}>
+      <Flex maxW={CONTENT_MAX_WIDTH} flexDir={'column'} alignItems={'center'}   my={SECTION_MARGIN_Y} px={SECTION_PADDING_X} gap={'20px'}>
+        <Heading textAlign={'center'} color={APP_BG} fontSize={SECTION_HEADING_FONT_SIZE}>Our Services</Heading>
+
         <SimpleGrid columns={6} w={'100%'} h={'100%'} rowGap={'20px'}>
-          <GridItem colSpan={[6, 6, 3, 3, 2]} w={'100%'} h={'100%'} justifyContent={'center'} >
-            <Flex h={'100%'} justifyContent={'center'}>
+          <GridItem colSpan={[6, 6, 3, 3, 2]} w={'100%'} h={'100%'}  >
+            <Flex h={'100%'} >
               <Flex flexDir={'column'} borderWidth={'1px'} maxW={'300px'} w={'100%'} minH={'400px'} h={'100%'} >
                 <Image alt='' src='/images/Assets Management.jpg' h={'100%'} />
                 {/* <Flex position={'relative'} mt={'20px'} w={'100%'} h='100%' minH={"400px"}>
@@ -144,11 +146,12 @@ const Services = () => {
             </Flex>
           </GridItem>
         </SimpleGrid>
-        <Flex mt={'20px'} justifyContent={'center'}>
+
+        <Flex  >
           <Flex w={'80%'} flexDir={'column'} gap={'20px'} pb={'20px'} >
             <Heading fontSize={['16px', '18px']} fontWeight={700}>Our Experienced team of experts establish and implement solutions for the delivery of property and facilities management services in accordance with ISO55000 (Asset Management) and ISO41000 (Facilities Management).</Heading>
             <Heading fontSize={['16px', '18px']} fontWeight={700}>Standards and compliance: ISO/IIAM/ CIBSE/BCA/NCC/DDA/</Heading>
-            <UnorderedList ml={'40px'} spacing={1} fontSize={['16px', '18px']} fontWeight={400} >
+            <UnorderedList ml={'40px'} spacing={1} fontSize={TEXT_FONT_SIZE} fontWeight={400} >
               <ListItem>Employment Service provider for Govt agencies HR, settlement, students advice, and career coaching</ListItem>
               <ListItem>Promote trained manpower business for UGHR India/ dubai</ListItem>
               <ListItem>Training in jv with Edutech</ListItem>
@@ -169,7 +172,7 @@ const Services = () => {
           </Flex>
         </Flex>
       </Flex>
-    </>
+    </Flex>
   );
 }
 
