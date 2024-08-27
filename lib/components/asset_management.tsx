@@ -7,7 +7,7 @@ import ContactUs from './contact_us';
 import { APP_BG, CONTENT_MAX_WIDTH, HEADER_BG, LIST_HEADING_FONT_SIZE, SECTION_HEADING_FONT_SIZE, SECTION_MARGIN_Y, SECTION_PADDING_X, TEXT_FONT_SIZE } from './app_constants';
 
 const AssetManagement = () => {
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(false);
   useEffect(() => {
     setTimeout(() => {
       setLoading(false)
@@ -34,11 +34,12 @@ const AssetManagement = () => {
       <Flex w={'100%'} justifyContent={'center'}>
         <Flex maxW={CONTENT_MAX_WIDTH} flexDir={'column'} alignItems={'center'}  w={'100%'}  my={SECTION_MARGIN_Y} px={SECTION_PADDING_X} >
           <Heading textAlign={'center'} color={APP_BG} fontSize={SECTION_HEADING_FONT_SIZE} mb={SECTION_MARGIN_Y}>QZ Sustainability & <br />Asset Management Services</Heading>
-            <SimpleGrid columns={6} columnGap={'40px'} rowGap={'40px'}  w={'100%'} >
+            <Flex flexDir={'column'}  gap={'40px'} w={'100%'} h={'100%'} >
 
-              <GridItem colSpan={[6,6,3]} >
-                <Flex flexDir={'column'} h={'100%'}  gap={'10px'} order={[2,2,1]}>
-                  <Heading fontSize={LIST_HEADING_FONT_SIZE}>Asset & Facilities Management Business Processes</Heading>
+            <Flex flexDir={['column','column','row']}  gap={['20px','20px','40px']}>
+              <Flex w={['100%','100%','50%']} order={[2,2,1]} >
+                <Flex flexDir={'column'} h={'100%'}  gap={'10px'} >
+                  <Heading display={['none','none','flex']} fontSize={LIST_HEADING_FONT_SIZE}>Asset & Facilities Management Business Processes</Heading>
                   <UnorderedList fontSize={TEXT_FONT_SIZE} >
                     <ListItem>Strategic Asset Management objectives and Plans</ListItem>
                     <ListItem>Development of Maintenance and Operation Strategy</ListItem>
@@ -54,68 +55,57 @@ const AssetManagement = () => {
                     <ListItem>Service level plans</ListItem>
                   </UnorderedList>
                 </Flex>
-              </GridItem>
-              <GridItem colSpan={[6,6,3]}>
+              </Flex>
+              <Flex w={['100%','100%','50%']} order={[1,1,2]}>
                 {/* <Flex maxW={'1100px'} h={'500px'} w={'100%'}  backgroundImage={'/images/asset_management1.jpg'} backgroundPosition={'center'} backgroundSize={'cover'} backgroundRepeat={'no-repeat'}>
                 </Flex> */}
+                <Flex flexDir={'column'} h={'100%'} w={'100%'} gap={['20px','20px','40px']}>
+                  <Heading  display={['flex','flex','none']} fontSize={LIST_HEADING_FONT_SIZE}>Asset & Facilities Management Business Processes</Heading>
 
-                <Flex position={'relative'} w={'100%'} h={'100%'} minH={'400px'} order={[1,1,2]}>
-                  <Image src={'/images/Asset_1.jpg'} priority={true} alt="logo" fill style={{ objectFit: 'fill'}} />
-                </Flex>
-              </GridItem>
-
-
-              <GridItem colSpan={[6,6,3]} >
-              {/*  <Flex maxW={'1100px'} h={'400px'} w={'100%'} backgroundImage={'/images/standard-quality-control-concept-m.jpg'} backgroundPosition={'center'} backgroundSize={'cover'} backgroundRepeat={'no-repeat'}>
-                </Flex> */}
-
-                <Flex position={'relative'} w={'100%'} h={'100%'} minH={'400px'}>
-                  <Image src={'/images/Information Systems.jpg'} priority={true} alt="logo" fill style={{ objectFit: 'fill' }} />
-                </Flex>
-              </GridItem>
-              <GridItem colSpan={[6,6,3]} mt={0}>
-                <Flex flexDir={'column'}  w={'100%'} height={'100%'} gap={'20px'} >
-                  <Flex flexDir={'column'} gap={'10px'}>
-                    <Heading fontSize={LIST_HEADING_FONT_SIZE}>Information Systems</Heading>
-                    <UnorderedList fontSize={TEXT_FONT_SIZE}>
-                      <ListItem >Information systems review</ListItem>
-                      <ListItem>System functional specification</ListItem>
-                      <ListItem>System selection</ListItem>
-                    </UnorderedList>
-                  </Flex>
-                  <Flex flexDir={'column'} gap={'10px'}>
-                    <Heading fontSize={LIST_HEADING_FONT_SIZE}>Data, Information and Knowledge</Heading>
-                    <UnorderedList fontSize={TEXT_FONT_SIZE}>
-                      <ListItem>Asset register production or review</ListItem>
-                      <ListItem>Condition and performance assessment and analysis</ListItem>
-                      <ListItem>Asset valuations</ListItem>
-                    </UnorderedList>
+                  <Flex position={'relative'} w={'100%'} h={'100%'} minH={'400px'} order={[1,1,2]}>
+                    <Image src={'/images/Asset_1.jpg'} priority={true} alt="logo" fill style={{ objectFit: 'fill'}} />
                   </Flex>
                 </Flex>
-              </GridItem>
-
-
-          {/*  <GridItem colSpan={[6,6,2]} >
-            <Flex flexDir={'column'} h={'100%'} justifyContent={'center'} gap={'10px'}>
-              <Heading fontSize={['17px','17px','16px','20px']}>Data, Information and Knowledge</Heading>
-              <UnorderedList fontSize={['14px','16px']}>
-                <ListItem>Asset register production or review</ListItem>
-                <ListItem>Condition and performance assessment and analysis</ListItem>
-                <ListItem>Asset valuations</ListItem>
-              </UnorderedList>
               </Flex>
-            </GridItem>
-            <GridItem colSpan={[6,6,1]}></GridItem>
-            <GridItem colSpan={[6,6,3]}>
-              <Flex maxW={'1100px'} h={'400px'} w={'100%'} 
-              backgroundImage={'/images/businessman-working-futuristic-office.jpg'} backgroundPosition={'center'} backgroundSize={'cover'} backgroundRepeat={'no-repeat'}>
+            </Flex>
+
+              <Flex flexDir={['column','column','row']}  gap={['20px','20px','40px']}>
+
+                <Flex w={['100%','100%','50%']} >
+                {/*  <Flex maxW={'1100px'} h={'400px'} w={'100%'} backgroundImage={'/images/standard-quality-control-concept-m.jpg'} backgroundPosition={'center'} backgroundSize={'cover'} backgroundRepeat={'no-repeat'}>
+                  </Flex> */}
+
+                  <Flex position={'relative'} w={'100%'} h={'100%'} minH={'400px'}>
+                    <Image src={'/images/Information Systems.jpg'} priority={true} alt="logo" fill style={{ objectFit: 'fill' }} />
+                  </Flex>
+                </Flex>
+                <Flex w={['100%','100%','50%']}>
+                  <Flex flexDir={'column'}  w={'100%'} height={'100%'} gap={'20px'} >
+                    <Flex flexDir={'column'}   gap={'10px'} >
+                     <Heading fontSize={LIST_HEADING_FONT_SIZE}>Information Systems</Heading>
+                      <UnorderedList fontSize={TEXT_FONT_SIZE}>
+                        <ListItem >Information systems review</ListItem>
+                        <ListItem>System functional specification</ListItem>
+                        <ListItem>System selection</ListItem>
+                      </UnorderedList>
+                    </Flex>
+                    <Flex flexDir={'column'}  gap={'10px'}  >
+                  <Heading  fontSize={LIST_HEADING_FONT_SIZE}>Data, Information and Knowledge</Heading>
+                      <UnorderedList fontSize={TEXT_FONT_SIZE}>
+                        <ListItem>Asset register production or review</ListItem>
+                        <ListItem>Condition and performance assessment and analysis</ListItem>
+                        <ListItem>Asset valuations</ListItem>
+                      </UnorderedList>
+                    </Flex>
+                  </Flex>
+                </Flex>
               </Flex>
-            </GridItem> */}
 
             
+              <Flex flexDir={['column','column','row']}  gap={['20px','20px','40px']}>
           
-              <GridItem colSpan={[6,6,3]} >
-                <Flex flexDir={'column'}  w={'100%'} height={'100%'} gap={'20px'} order={[4,4,3]} >
+              <Flex w={['100%','100%','50%']} order={[2,2,1]}>
+                <Flex flexDir={'column'}  w={'100%'} height={'100%'} gap={'20px'} >
                   <Flex flexDir={'column'} gap={'10px'}>
                     <Heading fontSize={LIST_HEADING_FONT_SIZE}>Commercial Practices</Heading>
                     <UnorderedList fontSize={TEXT_FONT_SIZE}>
@@ -138,47 +128,19 @@ const AssetManagement = () => {
                     </UnorderedList>
                   </Flex>
                 </Flex>
-              </GridItem>
-              <GridItem colSpan={[6,6,3]}>
+              </Flex>
+              <Flex w={['100%','100%','50%']} order={[1,1,2]}>
               {/* <Flex maxW={'1100px'} h={'400px'} w={'100%'}  backgroundImage={'/images/succesful-business-man-presenting-good-evolution-company-using-digital-tablet.jpg'} backgroundPosition={'center'} backgroundSize={'cover'} backgroundRepeat={'no-repeat'}>
               </Flex> */}
 
                 <Flex position={'relative'} w={'100%'} h={'100%'} minH={'400px'} order={[3,3,4]}>
                   <Image src={'/images/Facilities Management.jpg'} priority={true} alt="logo" fill style={{ objectFit: 'fill' }} />
                 </Flex>
-              </GridItem>
+              </Flex>
+              </Flex>
 
-
-            {/* <GridItem colSpan={[6,6,2]} >
-              <Flex flexDir={'column'}  h={'100%'}  justifyContent={'center'} gap={'10px'}>
-              <Heading fontSize={['17px','17px','16px','20px']}>Organizational Structure and Commitment</Heading>
-              <UnorderedList fontSize={['14px','16px']}>
-              <ListItem>Structural review</ListItem>
-              <ListItem>Position definition and recruitment</ListItem>
-              </UnorderedList>
-              </Flex>
-            </GridItem>
-            <GridItem colSpan={[6,6,1]}></GridItem>
-            <GridItem colSpan={[6,6,3]}>
-              <Flex maxW={'1100px'} h={'400px'} w={'100%'} backgroundImage={'/images/team-working-together-project.jpg'} backgroundPosition={'center'} backgroundSize={'cover'} backgroundRepeat={'no-repeat'}>
-              </Flex>
-            </GridItem> */}
-
-            {/* <GridItem colSpan={[6,6,3]}>
-              <Flex maxW={'1100px'} h={'400px'} w={'100%'} backgroundImage={'/images/department-meeting.jpg'} backgroundPosition={'center'} backgroundSize={'cover'} backgroundRepeat={'no-repeat'}>
-              </Flex>
-            </GridItem>
-            <GridItem colSpan={[6,6,1]}></GridItem>
-            <GridItem colSpan={[6,6,2]} >
-              <Flex flexDir={'column'} h={'100%'} justifyContent={'center'} gap={'10px'}>
-                <Heading fontSize={['17px','17px','16px','20px']}>People Skills and Resources</Heading>
-                <UnorderedList fontSize={['14px','16px']}>
-                <ListItem>Training programs</ListItem>
-                  <ListItem>Resources</ListItem>
-                </UnorderedList>
-              </Flex>
-            </GridItem> */}
-            </SimpleGrid>
+           
+            </Flex>
         </Flex>
       </Flex>
       <ContactUs />

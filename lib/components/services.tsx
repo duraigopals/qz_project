@@ -12,10 +12,10 @@ const Services = () => {
       <Flex maxW={CONTENT_MAX_WIDTH} flexDir={'column'} alignItems={'center'} w={'100%'}  my={SECTION_MARGIN_Y} px={SECTION_PADDING_X}  >
         <Heading textAlign={'center'} color={APP_BG} fontSize={SECTION_HEADING_FONT_SIZE} mb={SECTION_MARGIN_Y}>Our Services</Heading>
 
-        <Flex w={'100%'} h={'100%'} flexWrap={'wrap'} flexGrow={'1'} justifyContent={'space-between'} gap={'30px'}>
+        <Flex w={'100%'} h={'100%'} flexWrap={'wrap'} flexGrow={'1'} justifyContent={['center','center','space-between']} gap={'30px'}>
           <Flex   >
             <Flex h={'100%'} justifyContent={'center'}>
-              <Flex flexDir={'column'} borderWidth={'1px'} w={'270px'} minH={'350px'} h={'100%'} >
+              <Flex flexDir={'column'} borderWidth={'1px'} w={'265px'} minH={'350px'} h={'100%'} >
                 <Image alt='logo' src='/images/Assets Management.jpg' h={'100%'} loading='lazy' fallback={<Text>Loading...</Text>} onLoad={()=>console.log("eadinng..")}/>
                 {/* <Flex position={'relative'} mt={'20px'} w={'100%'} h='100%' minH={"400px"}>
                   <Image src={'/images/Assets Management.jpg'} priority={true} alt="logo" fill style={{ objectFit: 'contain' }} />
@@ -37,8 +37,8 @@ const Services = () => {
           </Flex>
           <Flex   justifyContent={'center'} >
             <Flex h={'100%'} justifyContent={'center'}>
-              <Flex flexDir={'column'} borderWidth={'1px'} w={'270px'}  h={'350px'} >
-                <Image alt='' src='images/Commercial Practices.jpg' h={'100%'} />
+              <Flex flexDir={'column'} borderWidth={'1px'} w={'265px'}  h={'350px'} >
+                <Image alt='' src='images/HR and ManPower.jpg' h={'100%'} />
 
                 {/* <Flex position={'relative'} mt={'20px'} w={'100%'} h='100%' minH={"400px"}>
                   <Image src={'/images/HR and ManPower.jpg'} priority={true} alt="logo" fill style={{ objectFit: 'contain' }} />
@@ -59,7 +59,7 @@ const Services = () => {
           </Flex>
           <Flex justifyContent={'center'} >
             <Flex h={'100%'} justifyContent={'center'}>
-              <Flex flexDir={'column'} borderWidth={'1px'} w={'270px'}  minH={'350px'} h={'100%'} >
+              <Flex flexDir={'column'} borderWidth={'1px'} w={'265px'}  minH={'350px'} h={'100%'} >
                 <Image alt='' src='/images/Project Management.jpg' h={'100%'} />
 
                 {/* <Flex position={'relative'} mt={'20px'} w={'100%'} h='100%' minH={"400px"}>
@@ -81,7 +81,7 @@ const Services = () => {
           </Flex>
           <Flex  justifyContent={'center'} >
             <Flex h={'100%'} justifyContent={'center'}>
-              <Flex flexDir={'column'} borderWidth={'1px'} w={'270px'} minH={'350px'} h={'100%'} >
+              <Flex flexDir={'column'} borderWidth={'1px'} w={'265px'} minH={'350px'} h={'100%'} >
                 <Image alt='' src='/images/Facilities Management.jpg' h={'100%'} />
 
                 {/* <Flex position={'relative'} mt={'20px'} w={'100%'} h='100%' minH={"400px"}>
@@ -103,7 +103,7 @@ const Services = () => {
           </Flex>
           <Flex  justifyContent={'center'} >
             <Flex h={'100%'} justifyContent={'center'}>
-              <Flex flexDir={'column'} borderWidth={'1px'} w={'270px'} minH={'350px'} h={'100%'} >
+              <Flex flexDir={'column'} borderWidth={'1px'} w={'265px'} minH={'350px'} h={'100%'} >
                 <Image alt='' src='/images/Strata Maintanence.jpg' h={'100%'} />
 
                 {/* <Flex position={'relative'} mt={'20px'} w={'100%'} h='100%' minH={"400px"}>
@@ -125,7 +125,7 @@ const Services = () => {
           </Flex>
           <Flex  justifyContent={'center'} >
             <Flex h={'100%'} justifyContent={'center'}>
-              <Flex flexDir={'column'} borderWidth={'1px'} w={'270px'}  minH={'350px'} h={'100%'} >
+              <Flex flexDir={'column'} borderWidth={'1px'} w={'265px'}  minH={'350px'} h={'100%'} >
                 <Image alt='' src='/images/Sustainability.jpg' h={'100%'} />
 
                 {/* <Flex position={'relative'} mt={'20px'} w={'100%'} h='100%' minH={"400px"}>
@@ -148,7 +148,7 @@ const Services = () => {
 
           <Flex  justifyContent={'center'} >
             <Flex h={'100%'} justifyContent={'center'}>
-              <Flex flexDir={'column'} borderWidth={'1px'} w={'270px'}  minH={'350px'} h={'100%'} >
+              <Flex flexDir={'column'} borderWidth={'1px'} w={'265px'}  minH={'350px'} h={'100%'} >
                 <Image alt='' src='/images/Asset_1.jpg' h={'100%'} />
 
                 {/* <Flex position={'relative'} mt={'20px'} w={'100%'} h='100%' minH={"400px"}>
@@ -171,7 +171,7 @@ const Services = () => {
 
           <Flex  justifyContent={'center'} visibility={'hidden'} display={['none','none','flex']}>
             <Flex h={'100%'} justifyContent={'center'}>
-              <Flex flexDir={'column'} borderWidth={'1px'} w={'270px'}  minH={'350px'} h={'100%'} >
+              <Flex flexDir={'column'} borderWidth={'1px'} w={'265px'}  minH={'350px'} h={'100%'} >
                 <Image alt='' src='/images/Asset_1.jpg' h={'100%'} />
 
                 {/* <Flex position={'relative'} mt={'20px'} w={'100%'} h='100%' minH={"400px"}>

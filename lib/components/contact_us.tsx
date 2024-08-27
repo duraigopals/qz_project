@@ -1,6 +1,6 @@
 "use client"
-import { Button, Flex, FormControl, FormLabel, GridItem, Heading, Input,Image, SimpleGrid } from '@chakra-ui/react';
-import React, { useState } from 'react'
+import { Button, Flex, FormControl, FormLabel, GridItem, Heading, Input,Image, SimpleGrid, useToast, Spinner } from '@chakra-ui/react';
+import React, { useEffect, useState } from 'react'
 import { APP_BG, CONTENT_MAX_WIDTH, FOOTER_BG, HEADER_BG, INPUT_BG, SECTION_HEADING_FONT_SIZE, SECTION_MARGIN_Y, SECTION_PADDING_X, TEXT_COLOR } from './app_constants';
 import MapImage from '../../public/images/map.png'
 import axios from 'axios';
@@ -16,7 +16,9 @@ const ContactUs = ({color=TEXT_COLOR, bg=HEADER_BG}:fields) => {
   const [lname, setLname] = useState<string>("")
   const [email, setEmail] = useState<string>("")
   const [subject, setSubject] = useState<string>("")
-  const [message, setMessage] = useState<string>("")
+  const [message, setMessage] = useState<string>("");
+  const toast = useToast();
+  
 
   const data = {
     "fname":fname,
@@ -26,25 +28,107 @@ const ContactUs = ({color=TEXT_COLOR, bg=HEADER_BG}:fields) => {
     "message":message
   }
 
+  const [loading, setLoading] = useState<boolean>(false);
+
   const handleSubmit = async(e:React.FormEvent) => {
     e.preventDefault();
-    console.log("Working",data)
-
+    
+   
+    if ( fname.length == 0) {
+      toast({
+        title: 'Please Enter Your First Name',
+        status: 'info',
+        duration: 3000,
+        isClosable: true,
+      });
+    }
+    else if (lname.length == 0) {
+      toast({
+        title: 'Please Enter Your Last Name',
+        status: 'info',
+        duration: 3000,
+        isClosable: true,
+      });
+    }
+    else if (email.length == 0) {
+      toast({
+        title: 'Please Enter Your Email',
+        status: 'info',
+        duration: 3000,
+        isClosable: true,
+      });
+    }
+    else if (subject.length == 0) {
+      toast({
+        title: 'Please Fill The Subject Field',
+        status: 'info',
+        duration: 3000,
+        isClosable: true,
+      });
+    }
+    else if (message.length == 0) {
+      toast({
+        title: 'Please Fill The Message Field',
+        status: 'info',
+        duration: 3000,
+        isClosable: true,
+      });
+    }
+    else {
+      console.log("Working",data);
+    setLoading(true);
     axios.post('/api/send-email',data)
-    .then((res)=>console.log(res))
-    .catch((err)=>console.log(err))
+    .then((res)=>{
+      console.log(res)
+      if (res.data.success) {
+        setLoading(false);
+        toast({
+          title: 'Email sent successfully!',
+          status: 'success',
+          duration: 5000,
+          isClosable: true,
+        });
+        setFname("");
+        setLname("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
+      } else {
+        setLoading(false);
+        toast({
+          title: 'Failed to send email.',
+          description: res.data.message,
+          status: 'error',
+          duration: 5000,
+          isClosable: true,
+        });
+      }
+    })
+    .catch((err)=>{console.log(err)
+      setLoading(false)
+      toast({
+        title: 'An error occurred.',
+        description: (err as Error).message,
+        status: 'error',
+        duration: 5000,
+        isClosable: true,
+    });
+    })
+  }
   }
   return (
       <Flex w={'100%'} h={'100%'} flexDir={'column'} alignItems={'center'} bg={bg} color={TEXT_COLOR}>
 
-        <Flex maxW={CONTENT_MAX_WIDTH} flexDir={'column'} alignItems={'center'}  w={'100%'}  my={SECTION_MARGIN_Y} px={SECTION_PADDING_X}>
+        <Flex maxW={CONTENT_MAX_WIDTH} flexDir={'column'} h={'100%'} alignItems={'center'}  w={'100%'}  my={SECTION_MARGIN_Y} px={SECTION_PADDING_X}>
+          
 
           <Heading textAlign={'center'}  letterSpacing={2} fontSize={SECTION_HEADING_FONT_SIZE}  color={color?color:'white'}>CONTACT US</Heading>
 
     {/* <Flex w={'100%'} flexDir={'column'} pt={10} pb={10}  justifyContent={'center'} alignItems={'center'} bg={bg} color={TEXT_COLOR}>
       <Heading fontSize={'36px'} fontWeight={700} letterSpacing={2} color={color?color:'white'}>CONTACT US</Heading> */}
       
-      <Flex bg={FOOTER_BG} my={SECTION_MARGIN_Y}  p={'30px'} maxW={'980px'}  w={'100%'}>
+      <Flex position={'relative'} bg={FOOTER_BG} my={SECTION_MARGIN_Y} h={'100%'}  p={'30px'} maxW={'980px'}  w={'100%'}>
+      
       <form style={{width:'100%'}} onSubmit={handleSubmit}>
         <SimpleGrid  w={'100%'} columns={4} columnGap={'20px'} rowGap={'20px'} >
           <GridItem colSpan={[4,2]} w={'100%'}>
@@ -79,7 +163,19 @@ const ContactUs = ({color=TEXT_COLOR, bg=HEADER_BG}:fields) => {
           </GridItem>
           <GridItem colSpan={[4,1]}>
             <Flex justifyContent={['center','flex-end']}  h={'100%'} alignItems={'end'}>
-            <Button type='submit' maxW={'200px'} maxH={'60px'} borderRadius={'0px'}>Send Message</Button>
+            <Button type='submit' maxW={'200px'} w={'100%'} maxH={'60px'} borderRadius={'0px'} isLoading = {loading} _hover = {{}} _focus={{}} >
+              { loading ? 
+                <Spinner
+                  thickness='4px'
+                  speed='0.65s'
+                  emptyColor='gray.200'
+                  color={HEADER_BG}
+                  size='xl'
+                  width={'20px'}
+                  height={'20px'}
+                /> : "Send Message"
+              }
+            </Button>
             </Flex>
           </GridItem>
           
