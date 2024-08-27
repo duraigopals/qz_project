@@ -1,9 +1,10 @@
 "use client"
-import { Button, Flex, FormControl, FormLabel, GridItem, Heading, Input,Image, SimpleGrid, useToast, Spinner } from '@chakra-ui/react';
+import { Button, Flex, FormControl, FormLabel, GridItem, Heading, Input,Image, SimpleGrid, useToast, Spinner, FormErrorMessage } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react'
 import { APP_BG, CONTENT_MAX_WIDTH, FOOTER_BG, HEADER_BG, INPUT_BG, SECTION_HEADING_FONT_SIZE, SECTION_MARGIN_Y, SECTION_PADDING_X, TEXT_COLOR } from './app_constants';
 import MapImage from '../../public/images/map.png'
 import axios from 'axios';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 export interface fields {
   color?:string,
@@ -12,11 +13,12 @@ export interface fields {
 
 const ContactUs = ({color=TEXT_COLOR, bg=HEADER_BG}:fields) => {
 
-  const [fname, setFname] = useState<string>("")
-  const [lname, setLname] = useState<string>("")
-  const [email, setEmail] = useState<string>("")
-  const [subject, setSubject] = useState<string>("")
+  const [fname, setFname] = useState<string>("");
+  const [lname, setLname] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [subject, setSubject] = useState<string>("");
   const [message, setMessage] = useState<string>("");
+  const [captcha, setCaptcha] = useState<string | null>();
   const toast = useToast();
   
 
@@ -28,12 +30,24 @@ const ContactUs = ({color=TEXT_COLOR, bg=HEADER_BG}:fields) => {
     "message":message
   }
 
+  useEffect(() => {
+    if(captcha) {
+      toast({
+        title: 'Captcha Verified',
+        status: 'success',
+        duration: 3000,
+        isClosable: true,
+      });
+    }
+    
+  }, [captcha]);
   const [loading, setLoading] = useState<boolean>(false);
 
   const handleSubmit = async(e:React.FormEvent) => {
     e.preventDefault();
-    
-   
+    console.log(captcha)  ;
+
+    let errors = {};
     if ( fname.length == 0) {
       toast({
         title: 'Please Enter Your First Name',
@@ -69,6 +83,14 @@ const ContactUs = ({color=TEXT_COLOR, bg=HEADER_BG}:fields) => {
     else if (message.length == 0) {
       toast({
         title: 'Please Fill The Message Field',
+        status: 'info',
+        duration: 3000,
+        isClosable: true,
+      });
+    }
+    else if (!captcha) {
+      toast({
+        title: 'Please Fill Captcha Field',
         status: 'info',
         duration: 3000,
         isClosable: true,
@@ -135,6 +157,7 @@ const ContactUs = ({color=TEXT_COLOR, bg=HEADER_BG}:fields) => {
             <FormControl color={TEXT_COLOR}>
               <FormLabel>First Name</FormLabel>
               <Input borderRadius={0} border={'none'} h={'40px'} borderBottom={'1px'} bg={INPUT_BG} value={fname} onChange={(e)=>setFname(e.target.value)}/>
+              <FormErrorMessage>{}</FormErrorMessage>
             </FormControl>
           </GridItem>
           <GridItem colSpan={[4,2]} w={'100%'}>
@@ -155,13 +178,18 @@ const ContactUs = ({color=TEXT_COLOR, bg=HEADER_BG}:fields) => {
               <Input borderRadius={0} border={'none'} h={'40px'} borderBottom={'1px'} bg={INPUT_BG} value={subject} onChange={(e)=>setSubject(e.target.value)}/>
             </FormControl>
           </GridItem>
-          <GridItem colSpan={[4,3]}>
+          <GridItem colSpan={[4,4]}>
             <FormControl color={TEXT_COLOR}>
               <FormLabel>Message *</FormLabel>
               <Input borderRadius={0} border={'none'} h={'90px'} borderBottom={'1px'} bg={INPUT_BG} value={message} onChange={(e)=>setMessage(e.target.value)}/>
             </FormControl>
           </GridItem>
-          <GridItem colSpan={[4,1]}>
+          <GridItem colSpan={[4,2]} >
+            <Flex w={'100%'}>
+            <ReCAPTCHA sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!} onChange={setCaptcha}/>
+            </Flex>
+          </GridItem>
+          <GridItem colSpan={[4,2]}>
             <Flex justifyContent={['center','flex-end']}  h={'100%'} alignItems={'end'}>
             <Button type='submit' maxW={'200px'} w={'100%'} maxH={'60px'} borderRadius={'0px'} isLoading = {loading} _hover = {{}} _focus={{}} >
               { loading ? 
