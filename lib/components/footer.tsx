@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <Flex w={'100%'} minH={'400px'} h={'100%'} bg={FOOTER_BG} justifyContent={'center'} >
     <Flex maxW={CONTENT_MAX_WIDTH} w={'100%'}  flexDir={['column','row']} color={TEXT_COLOR}  justifyContent={'space-between'}  p={'20px'}>
-      <Flex flexDir = {'column'} mt={'20px'} w={'100%'} alignItems={['flex-start','center']}>
+      <Flex flexDir = {'column'} mt={['20px','30px']} w={'100%'} alignItems={['flex-start','center']}>
         <Flex flexDir={'column'} justifyContent={'flex-start'} color={TEXT_COLOR} gap={'20px'} >
 
           <Text fontSize={['18px','20px']} textAlign={'left'}>QZ SUSTAINABILITY & <br />ASSET MANAGEMENT <br />SERVICES</Text>
@@ -27,14 +27,9 @@ const Footer = () => {
             <Text>Mob: +61 432 472 407</Text>
             <Text>Mob: +61 412 465 945</Text>
           </Box>
-
-          <Box fontSize={TEXT_FONT_SIZE} gap={'10px'}>
-            <Text>Standards and compliance</Text>
-            <Text>ISO/IIAM/ CIBSE/BCA/NCC/DDA/</Text>
-          </Box>
         </Flex>
       </Flex>
-      <Flex flexDir={'column'} w={'100%'} mt={'20px'} gap={'20px'} alignItems={['flex-start','center']} >
+      {/* <Flex flexDir={'column'} w={'100%'} mt={'20px'} gap={'20px'} alignItems={['flex-start','center']} >
         <Text fontSize={['18px','20px']} mr={'40px'}>MENU</Text>
         <Flex flexDir={'column'} color={TEXT_COLOR} fontSize={TEXT_FONT_SIZE} gap={'10px'}>
           <Link href="/" ><Text color={pathname == '/' ? TEXT_HOVER : TEXT_COLOR}  _hover={{ color:TEXT_HOVER}}>Home</Text></Link>
@@ -42,10 +37,32 @@ const Footer = () => {
           <Link href="/our_services" ><Text color={ ourServicesPath.includes(pathname) ? TEXT_HOVER : TEXT_COLOR}  _hover={{ color:TEXT_HOVER}}>Our Services</Text></Link>
           <Link href="/contact_us" ><Text color={pathname == '/contact_us' ? TEXT_HOVER : TEXT_COLOR} _hover={{ color:TEXT_HOVER}}>Contact</Text></Link>
         </Flex>
-      </Flex>
+      </Flex> */}
 
-      <Flex flexDir={'column'} w={'100%'} mt={'20px'} alignItems={['flex-start','center']}>
-        <Flex flexDir={'column'}  gap={'20px'} justifyContent={'flex-start'}>
+    <Flex w={'100%'}>
+      <Flex flexDir={['column']} w={'100%'} mt={'30px'} gap={'20px'} alignItems={['flex-start','center']}>
+          <Flex flexDir={'column'} color={TEXT_COLOR} fontSize={TEXT_FONT_SIZE} gap={'10px'}>
+            <Text fontSize={['18px','20px']} mb={'10px'}>MENU</Text>
+            <Link href="/" ><Text color={pathname == '/' ? TEXT_HOVER : TEXT_COLOR}  _hover={{ color:TEXT_HOVER}}>Home</Text></Link>
+            <Link href="/about_us"><Text color={pathname == '/about_us' ? TEXT_HOVER : TEXT_COLOR} _hover={{ color:TEXT_HOVER}}>About Us</Text></Link>
+            <Link href="/our_services" ><Text color={ ourServicesPath.includes(pathname) ? TEXT_HOVER : TEXT_COLOR}  _hover={{ color:TEXT_HOVER}}>Our Services</Text></Link>
+            <Link href="/contact_us" ><Text color={pathname == '/contact_us' ? TEXT_HOVER : TEXT_COLOR} _hover={{ color:TEXT_HOVER}}>Contact</Text></Link>
+          </Flex>
+        </Flex>
+        <Flex flexDir={['column']} w={'100%'} mt={'30px'} gap={'20px'} alignItems={['flex-start','center']}  display={['flex','none']}>
+          <Flex flexDir={'column'} color={TEXT_COLOR} fontSize={TEXT_FONT_SIZE} gap={'10px'}>
+            <Text fontSize={['18px','20px']} mb={'10px'}>FOLLOW US</Text>
+            <Flex alignItems={'center'} gap={'10px'}>
+            <Link href="#" color="white"><Text color={TEXT_COLOR} p={'4px'}><FaFacebook fontSize={'25px'}/></Text></Link>
+            <Link href="#" color="white"><Text color={TEXT_COLOR}  ><FaTwitter  fontSize={'25px'} /></Text></Link>
+            </Flex>
+          </Flex>
+        </Flex>
+        </Flex>
+
+
+      <Flex flexDir={'column'} w={'100%'} mt={'30px'} alignItems={['flex-start','center']} >
+        <Flex flexDir={'column'}  gap={'20px'} justifyContent={'flex-start'} display={['none','flex']}>
         <Text fontSize={['18px','20px']}>FOLLOW US</Text>
         <Flex flexDir={'row'} gap={'10px'} justifyContent={'flex-start'} w={'35%'}alignItems={'center'}>
             <Link href="#" color="white"><Text color={TEXT_COLOR} p={'4px'}><FaFacebook fontSize={'25px'}/></Text></Link>
@@ -55,6 +72,10 @@ const Footer = () => {
             <Text >&copy; {year.getFullYear()} by QZ Sustainability</Text>
             <Text>All rights reserved.</Text>
           </Flex>
+        </Flex>
+        <Flex flexDir={'column'} alignItems={'center'} fontSize={TEXT_FONT_SIZE} w={'100%'}  gap={'10px'} display={['flex','none']}>
+            <Text >&copy; {year.getFullYear()} by QZ Sustainability</Text>
+            <Text>All rights reserved.</Text>
           </Flex>
       </Flex>
     </Flex>

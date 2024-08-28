@@ -8,7 +8,7 @@ import { APP_BG, CONTENT_MAX_WIDTH, HEADER_BG, LIST_HEADING_FONT_SIZE, SECTION_H
 
 const FacilityManagement = () => {
 
-  const [loading, setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
   useEffect(() => {
     setTimeout(() => {
       setLoading(false)

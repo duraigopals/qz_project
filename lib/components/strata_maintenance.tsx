@@ -33,7 +33,7 @@ const StrataMaintenance = () => {
       <Flex w={'100%'}  justifyContent={'center'}>
 
         <Flex maxW={CONTENT_MAX_WIDTH} flexDir={'column'} alignItems={'center'} w={'100%'}  my={SECTION_MARGIN_Y} px={SECTION_PADDING_X} >
-          <Heading textAlign={'center'} color={APP_BG} fontSize={SECTION_HEADING_FONT_SIZE} mb={SECTION_MARGIN_Y}>Strata Maintenance – Residential Properties</Heading>
+          <Heading textAlign={'center'} color={APP_BG} fontSize={SECTION_HEADING_FONT_SIZE} mb={SECTION_MARGIN_Y}>Strata Maintenance – Commercial/Residential Properties</Heading>
 
           <Flex flexDir={['column','column','column','row','row']} gap={'30px'}>
             <Flex position={'relative'} w={'100%'} h={'100%'} minH={'400px'} >

@@ -19,19 +19,32 @@ const ContactUs = ({color=TEXT_COLOR, bg=HEADER_BG}:fields) => {
   const [subject, setSubject] = useState<string>("");
   const [message, setMessage] = useState<string>("");
   const [captcha, setCaptcha] = useState<string | null>();
+  const [loading, setLoading] = useState<boolean>(false);
   const toast = useToast();
-  
+  console.log(fname,"fname")
 
-  const data = {
-    "fname":fname,
-    "lname":lname,
-    "email":email,
-    "subject":subject,
-    "message":message
-  }
+  const [errors, setErrors ] = useState({
+    fname: '' ,
+    lname: '' ,
+    email: '' ,
+    subject: '' ,
+    message:'',
+    captcha:'' 
+  });
+
+  console.log(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY);
+  
+  const [data,setData] = useState({
+      "fname":'',
+      "lname":'',
+      "email":'',
+      "subject":'',
+      "message":''
+  })
 
   useEffect(() => {
     if(captcha) {
+      setErrors(prev => ({ ...prev, captcha: '' }));
       toast({
         title: 'Captcha Verified',
         status: 'success',
@@ -41,65 +54,88 @@ const ContactUs = ({color=TEXT_COLOR, bg=HEADER_BG}:fields) => {
     }
     
   }, [captcha]);
-  const [loading, setLoading] = useState<boolean>(false);
+
+  const handleFnameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFname(e.target.value);
+    if (e.target.value.length > 0) {
+      setData(prev =>({...prev, fname:e.target.value}))
+      setErrors(prev => ({ ...prev, fname: '' }));
+    }
+  };
+  
+  const handleLnameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setLname(e.target.value);
+    if (e.target.value.length > 0) {
+      setData(prev =>({...prev, lname:e.target.value}))
+      setErrors(prev => ({ ...prev, lname: '' }));
+    }
+  };
+  
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+    if (e.target.value.length > 0) {
+      setData(prev =>({...prev, email:e.target.value}))
+      setErrors(prev => ({ ...prev, email: '' }));
+    }
+  };
+  
+  const handleSubjectChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSubject(e.target.value);
+    if (e.target.value.length > 0) {
+      setData(prev =>({...prev, subject:e.target.value}))
+      setErrors(prev => ({ ...prev, subject: '' }));
+    }
+  };
+  
+  const handleMessageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setMessage(e.target.value);
+    if (e.target.value.length > 0) {
+      setData(prev =>({...prev, message:e.target.value}))
+      setErrors(prev => ({ ...prev, message: '' }));
+    }
+  };
 
   const handleSubmit = async(e:React.FormEvent) => {
     e.preventDefault();
     console.log(captcha)  ;
 
-    let errors = {};
-    if ( fname.length == 0) {
-      toast({
-        title: 'Please Enter Your First Name',
-        status: 'info',
-        duration: 3000,
-        isClosable: true,
-      });
+    let hasErrors = false;
+    let regex = /\S+@\S+\.\S+/;
+
+    if (fname.length === 0) {
+      setErrors(prev => ({ ...prev, fname: 'Please Enter Your First Name' }));
+      hasErrors = true;
     }
-    else if (lname.length == 0) {
-      toast({
-        title: 'Please Enter Your Last Name',
-        status: 'info',
-        duration: 3000,
-        isClosable: true,
-      });
+    if (lname.length === 0) {
+      setErrors(prev => ({ ...prev, lname: 'Please Enter Your Last Name' }));
+      hasErrors = true;
     }
-    else if (email.length == 0) {
-      toast({
-        title: 'Please Enter Your Email',
-        status: 'info',
-        duration: 3000,
-        isClosable: true,
-      });
+    if (email.length === 0) {
+      setErrors(prev => ({ ...prev, email: 'Please Enter Your Email' }));
+      hasErrors = true;
+    } else if (!(regex.test(email))) {
+      setErrors(prev => ({ ...prev, email: 'Please Enter Valid Email' }));
+      hasErrors = true;
     }
-    else if (subject.length == 0) {
-      toast({
-        title: 'Please Fill The Subject Field',
-        status: 'info',
-        duration: 3000,
-        isClosable: true,
-      });
+    if (subject.length === 0) {
+      setErrors(prev => ({ ...prev, subject: 'Please Fill the Subject Field' }));
+      hasErrors = true;
     }
-    else if (message.length == 0) {
-      toast({
-        title: 'Please Fill The Message Field',
-        status: 'info',
-        duration: 3000,
-        isClosable: true,
-      });
+    if (message.length === 0) {
+      setErrors(prev => ({ ...prev, message: 'Please Fill the Message Field' }));
+      hasErrors = true;
     }
-    else if (!captcha) {
-      toast({
-        title: 'Please Fill Captcha Field',
-        status: 'info',
-        duration: 3000,
-        isClosable: true,
-      });
+    if(!captcha) {
+      setErrors(prev => ({ ...prev, captcha: 'Please Verify the Captcha Field' }));
+      hasErrors = true;
     }
-    else {
-      console.log("Working",data);
+    
+    if (hasErrors) return;
+    
+    console.log("Working",data);
     setLoading(true);
-    axios.post('/api/send-email',data)
+
+    axios.post('https://qzsustainability.com.au/api/contact_api.php',data)
     .then((res)=>{
       console.log(res)
       if (res.data.success) {
@@ -137,7 +173,7 @@ const ContactUs = ({color=TEXT_COLOR, bg=HEADER_BG}:fields) => {
     });
     })
   }
-  }
+
   return (
       <Flex w={'100%'} h={'100%'} flexDir={'column'} alignItems={'center'} bg={bg} color={TEXT_COLOR}>
 
@@ -149,48 +185,73 @@ const ContactUs = ({color=TEXT_COLOR, bg=HEADER_BG}:fields) => {
     {/* <Flex w={'100%'} flexDir={'column'} pt={10} pb={10}  justifyContent={'center'} alignItems={'center'} bg={bg} color={TEXT_COLOR}>
       <Heading fontSize={'36px'} fontWeight={700} letterSpacing={2} color={color?color:'white'}>CONTACT US</Heading> */}
       
-      <Flex position={'relative'} bg={FOOTER_BG} my={SECTION_MARGIN_Y} h={'100%'}  p={'30px'} maxW={'980px'}  w={'100%'}>
+      <Flex position={'relative'} bg={FOOTER_BG} my={SECTION_MARGIN_Y} h={'100%'}  p={'30px 30px 20px 30px'} maxW={'980px'}  w={'100%'}>
       
       <form style={{width:'100%'}} onSubmit={handleSubmit}>
         <SimpleGrid  w={'100%'} columns={4} columnGap={'20px'} rowGap={'20px'} >
           <GridItem colSpan={[4,2]} w={'100%'}>
-            <FormControl color={TEXT_COLOR}>
+            <FormControl color={TEXT_COLOR} isInvalid={!!errors.fname}>
               <FormLabel>First Name</FormLabel>
-              <Input borderRadius={0} border={'none'} h={'40px'} borderBottom={'1px'} bg={INPUT_BG} value={fname} onChange={(e)=>setFname(e.target.value)}/>
-              <FormErrorMessage>{}</FormErrorMessage>
+              <Input borderRadius={0} border={'none'} h={'40px'} borderBottom={'1px'} bg={INPUT_BG} value={fname} onChange={handleFnameChange}/>
+              <FormErrorMessage>{errors.fname}</FormErrorMessage>
             </FormControl>
           </GridItem>
           <GridItem colSpan={[4,2]} w={'100%'}>
-            <FormControl color={TEXT_COLOR}>
+            <FormControl color={TEXT_COLOR} isInvalid={!!errors.lname}>
               <FormLabel>Last Name</FormLabel>
-              <Input borderRadius={0} border={'none'} h={'40px'} borderBottom={'1px'} bg={INPUT_BG} value={lname} onChange={(e)=>setLname(e.target.value)}/>
+              <Input borderRadius={0} border={'none'} h={'40px'} borderBottom={'1px'} bg={INPUT_BG} value={lname} onChange={handleLnameChange}/>
+              <FormErrorMessage>{errors.lname}</FormErrorMessage>
             </FormControl>
           </GridItem>
           <GridItem colSpan={[4,2]}>
-            <FormControl color={TEXT_COLOR}>
+            <FormControl color={TEXT_COLOR} isInvalid={!!errors.email}>
               <FormLabel>Email *</FormLabel>
-              <Input borderRadius={0} border={'none'} h={'40px'} borderBottom={'1px'} bg={INPUT_BG} value={email} onChange={(e)=>setEmail(e.target.value)}/>
+              <Input borderRadius={0} border={'none'} h={'40px'} borderBottom={'1px'} bg={INPUT_BG} value={email} onChange={handleEmailChange}/>
+              <FormErrorMessage>{errors.email}</FormErrorMessage>
             </FormControl>
           </GridItem>
           <GridItem colSpan={[4,2]}>
-            <FormControl color={TEXT_COLOR}>
+            <FormControl color={TEXT_COLOR} isInvalid={!!errors.subject}>
               <FormLabel>Subject</FormLabel>
-              <Input borderRadius={0} border={'none'} h={'40px'} borderBottom={'1px'} bg={INPUT_BG} value={subject} onChange={(e)=>setSubject(e.target.value)}/>
+              <Input borderRadius={0} border={'none'} h={'40px'} borderBottom={'1px'} bg={INPUT_BG} value={subject} onChange={handleSubjectChange}/>
+              <FormErrorMessage>{errors.subject}</FormErrorMessage>
             </FormControl>
           </GridItem>
           <GridItem colSpan={[4,4]}>
-            <FormControl color={TEXT_COLOR}>
+            <FormControl color={TEXT_COLOR} isInvalid={!!errors.message}>
               <FormLabel>Message *</FormLabel>
-              <Input borderRadius={0} border={'none'} h={'90px'} borderBottom={'1px'} bg={INPUT_BG} value={message} onChange={(e)=>setMessage(e.target.value)}/>
+              <Input borderRadius={0} border={'none'} h={'90px'} borderBottom={'1px'} bg={INPUT_BG} value={message} onChange={handleMessageChange}/>
+              <FormErrorMessage>{errors.message}</FormErrorMessage>
             </FormControl>
           </GridItem>
           <GridItem colSpan={[4,2]} >
-            <Flex w={'100%'}>
-            <ReCAPTCHA sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!} onChange={setCaptcha}/>
-            </Flex>
+            <FormControl  isInvalid={!!errors.captcha} >
+            <div className="recaptcha-container">
+              <ReCAPTCHA size='normal' sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!} onChange={setCaptcha}/>
+              <FormErrorMessage>{errors.captcha}</FormErrorMessage>
+              </div>
+              <style jsx>{`
+                .recaptcha-container {
+                  display: inline-block;
+                  width: 100%;
+                }
+                @media (max-width: 600px) {
+                  .recaptcha-container {
+                    transform: scale(0.9); // Adjust scale as needed for smaller screens
+                    transform-origin: 0 0; // Keep scaling from the top-left corner
+                  }
+                }
+                @media (min-width: 601px) and (max-width: 1024px) {
+                  .recaptcha-container {
+                    transform: scale(0.9); // Adjust scale as needed for tablets
+                    transform-origin: 0 0; // Keep scaling from the top-left corner
+                  }
+                }
+              `}</style>
+            </FormControl>
           </GridItem>
           <GridItem colSpan={[4,2]}>
-            <Flex justifyContent={['center','flex-end']}  h={'100%'} alignItems={'end'}>
+            <Flex justifyContent={['center','flex-end']}  h={'100%'} alignItems={'center'}>
             <Button type='submit' maxW={'200px'} w={'100%'} maxH={'60px'} borderRadius={'0px'} isLoading = {loading} _hover = {{}} _focus={{}} >
               { loading ? 
                 <Spinner

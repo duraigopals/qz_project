@@ -43,6 +43,8 @@ const ProjectManagement = () => {
             <Flex flexDir={'column'} w={'100%'} h={'100%'} gap={'10px'} fontSize={TEXT_FONT_SIZE}>
               <Text >Our expert project management service sets high standards of control and delivery to meet budget and programme targets for diverse construction projects. We work collaboratively with clients from initial concept through to completion and occupancy, providing innovative and value-added solutions to minimise risk and maximise investment returns.</Text>
               <Text >We draw on industry-leading thinking and our strong digital platform gives our project managers access to the most current project templates, project data, knowledge and standards.</Text>
+              <Text >Cap Ex Projects / Built Asset Upgrades / Modernisation </Text>
+              <Text >This includes spendings on upgrading or enhancing the efficiency of existing assets, such as  Lifts, boilers, HVAC equipment, BMS, Switch boards , Plumbing fixtures,  or  CMMS networks, to boost their capacity or functionality. This may include adoption of new technology and modern solutions into the business.</Text>
             </Flex>
           </Flex>
         </Flex>

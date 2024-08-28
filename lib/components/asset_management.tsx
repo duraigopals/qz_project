@@ -7,7 +7,7 @@ import ContactUs from './contact_us';
 import { APP_BG, CONTENT_MAX_WIDTH, HEADER_BG, LIST_HEADING_FONT_SIZE, SECTION_HEADING_FONT_SIZE, SECTION_MARGIN_Y, SECTION_PADDING_X, TEXT_FONT_SIZE } from './app_constants';
 
 const AssetManagement = () => {
-  const [loading, setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
   useEffect(() => {
     setTimeout(() => {
       setLoading(false)
@@ -41,18 +41,18 @@ const AssetManagement = () => {
                 <Flex flexDir={'column'} h={'100%'}  gap={'10px'} >
                   <Heading display={['none','none','flex']} fontSize={LIST_HEADING_FONT_SIZE}>Asset & Facilities Management Business Processes</Heading>
                   <UnorderedList fontSize={TEXT_FONT_SIZE} >
-                    <ListItem>Strategic Asset Management objectives and Plans</ListItem>
+                    <ListItem>Strategic Asset Management Objectives and Plans</ListItem>
                     <ListItem>Development of Maintenance and Operation Strategy</ListItem>
-                    <ListItem>Asset and facilities management reviews and improvement plans</ListItem>
-                    <ListItem>Risk assessment and management</ListItem>
-                    <ListItem>Due diligence assessments</ListItem>
-                    <ListItem>Maintenance plans</ListItem>
-                    <ListItem>Business improvement implementation</ListItem>
-                    <ListItem>Policy, process and procedural documentation</ListItem>
-                    <ListItem>Capital works plans</ListItem>
-                    <ListItem>Capital works evaluation</ListItem>
-                    <ListItem>Lifecycle costing analysis</ListItem>
-                    <ListItem>Service level plans</ListItem>
+                    <ListItem>Asset and Facilities Management Reviews and Improvement Plans</ListItem>
+                    <ListItem>Risk Assessment and Management</ListItem>
+                    <ListItem>Due Diligence Assessments</ListItem>
+                    <ListItem>Maintenance Plans</ListItem>
+                    <ListItem>Business Improvement Implementation</ListItem>
+                    <ListItem>Policy, Process and Procedural Documentation</ListItem>
+                    <ListItem>Capital Works Plans</ListItem>
+                    <ListItem>Capital Works Evaluation</ListItem>
+                    <ListItem>Lifecycle Costing Analysis</ListItem>
+                    <ListItem>Service Level Plans</ListItem>
                   </UnorderedList>
                 </Flex>
               </Flex>
@@ -82,19 +82,19 @@ const AssetManagement = () => {
                 <Flex w={['100%','100%','50%']}>
                   <Flex flexDir={'column'}  w={'100%'} height={'100%'} gap={'20px'} >
                     <Flex flexDir={'column'}   gap={'10px'} >
-                     <Heading fontSize={LIST_HEADING_FONT_SIZE}>Information Systems</Heading>
+                     <Heading fontSize={LIST_HEADING_FONT_SIZE}>Cmms / Information Systems</Heading>
                       <UnorderedList fontSize={TEXT_FONT_SIZE}>
-                        <ListItem >Information systems review</ListItem>
-                        <ListItem>System functional specification</ListItem>
-                        <ListItem>System selection</ListItem>
+                        <ListItem >Information Systems Review</ListItem>
+                        <ListItem>System Functional Specification</ListItem>
+                        <ListItem>System Selection</ListItem>
                       </UnorderedList>
                     </Flex>
                     <Flex flexDir={'column'}  gap={'10px'}  >
                   <Heading  fontSize={LIST_HEADING_FONT_SIZE}>Data, Information and Knowledge</Heading>
                       <UnorderedList fontSize={TEXT_FONT_SIZE}>
-                        <ListItem>Asset register production or review</ListItem>
-                        <ListItem>Condition and performance assessment and analysis</ListItem>
-                        <ListItem>Asset valuations</ListItem>
+                        <ListItem>Asset Register Production or Review</ListItem>
+                        <ListItem>Condition and Performance Assessment and Analysis</ListItem>
+                        <ListItem>Data Analysis, Clean Up</ListItem>
                       </UnorderedList>
                     </Flex>
                   </Flex>
@@ -110,20 +110,20 @@ const AssetManagement = () => {
                     <Heading fontSize={LIST_HEADING_FONT_SIZE}>Commercial Practices</Heading>
                     <UnorderedList fontSize={TEXT_FONT_SIZE}>
                       <ListItem>Benchmarking</ListItem>
-                      <ListItem>Contracts management</ListItem>
+                      <ListItem>Contracts Management</ListItem>
                     </UnorderedList>
                   </Flex>
                   <Flex flexDir={'column'} gap={'10px'}>
                     <Heading fontSize={LIST_HEADING_FONT_SIZE}>Organizational Structure and Commitment</Heading>
                     <UnorderedList fontSize={TEXT_FONT_SIZE}>
-                      <ListItem>Structural review</ListItem>
-                      <ListItem>Position definition and recruitment</ListItem>
+                      <ListItem>Structural Review</ListItem>
+                      <ListItem>Position Definition and Recruitment</ListItem>
                     </UnorderedList>
                   </Flex>
                   <Flex flexDir={'column'} gap={'10px'}>
                     <Heading fontSize={LIST_HEADING_FONT_SIZE}>People Skills and Resources</Heading>
                     <UnorderedList fontSize={TEXT_FONT_SIZE}>
-                      <ListItem>Training programs</ListItem>
+                      <ListItem>Training Programs</ListItem>
                       <ListItem>Resources</ListItem>
                     </UnorderedList>
                   </Flex>
