@@ -2,7 +2,6 @@
 import { Button, Flex, FormControl, FormLabel, GridItem, Heading, Input,Image, SimpleGrid, useToast, Spinner, FormErrorMessage } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react'
 import { APP_BG, CONTENT_MAX_WIDTH, FOOTER_BG, HEADER_BG, INPUT_BG, SECTION_HEADING_FONT_SIZE, SECTION_MARGIN_Y, SECTION_PADDING_X, TEXT_COLOR } from './app_constants';
-import MapImage from '../../public/images/map.png'
 import axios from 'axios';
 import ReCAPTCHA from 'react-google-recaptcha';
 
@@ -103,30 +102,30 @@ const ContactUs = ({color=TEXT_COLOR, bg=HEADER_BG}:fields) => {
     let regex = /\S+@\S+\.\S+/;
 
     if (fname.length === 0) {
-      setErrors(prev => ({ ...prev, fname: 'Please Enter Your First Name' }));
+      setErrors(prev => ({ ...prev, fname: 'Please enter your First Name' }));
       hasErrors = true;
     }
     if (lname.length === 0) {
-      setErrors(prev => ({ ...prev, lname: 'Please Enter Your Last Name' }));
+      setErrors(prev => ({ ...prev, lname: 'Please enter your Last Name' }));
       hasErrors = true;
     }
     if (email.length === 0) {
-      setErrors(prev => ({ ...prev, email: 'Please Enter Your Email' }));
+      setErrors(prev => ({ ...prev, email: 'Please enter your Email' }));
       hasErrors = true;
     } else if (!(regex.test(email))) {
-      setErrors(prev => ({ ...prev, email: 'Please Enter Valid Email' }));
+      setErrors(prev => ({ ...prev, email: 'Please enter a valid Email' }));
       hasErrors = true;
     }
     if (subject.length === 0) {
-      setErrors(prev => ({ ...prev, subject: 'Please Fill the Subject Field' }));
+      setErrors(prev => ({ ...prev, subject: 'Please enter the Subject' }));
       hasErrors = true;
     }
     if (message.length === 0) {
-      setErrors(prev => ({ ...prev, message: 'Please Fill the Message Field' }));
+      setErrors(prev => ({ ...prev, message: 'Please enter the Message' }));
       hasErrors = true;
     }
     if(!captcha) {
-      setErrors(prev => ({ ...prev, captcha: 'Please Verify the Captcha Field' }));
+      setErrors(prev => ({ ...prev, captcha: 'Please verify the Captcha' }));
       hasErrors = true;
     }
     
@@ -135,7 +134,7 @@ const ContactUs = ({color=TEXT_COLOR, bg=HEADER_BG}:fields) => {
     console.log("Working",data);
     setLoading(true);
 
-    axios.post('https://qzsustainability.com.au/api/contact_api.php',data)
+    axios.post('api/contact_api.php',data)
     .then((res)=>{
       console.log(res)
       if (res.data.success) {

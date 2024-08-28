@@ -124,10 +124,10 @@ const Navbar = () => {
 
           <Box   px={SECTION_PADDING_X} pb={'20px'} >
             <Flex gap={'20px'} flexDir={'row'} color={TEXT_COLOR} fontSize={TEXT_FONT_SIZE}>
-              <Link href="#" ><Text color={TEXT_COLOR}><FaFacebook /></Text></Link>
-              <Link href="#"><Text color={TEXT_COLOR}><FaInstagram /></Text></Link>
-              <Link href="#"><Text color={TEXT_COLOR}><FaXTwitter /></Text></Link>
-              <Link href="#"><Text color={TEXT_COLOR}><FaLinkedin /></Text></Link>
+              <Link href="#" ><Text color={TEXT_COLOR} _hover={{ color:TEXT_HOVER}} ><FaFacebook /></Text></Link>
+              <Link href="#"><Text color={TEXT_COLOR} _hover={{ color:TEXT_HOVER}} ><FaInstagram /></Text></Link>
+              <Link href="#"><Text color={TEXT_COLOR} _hover={{ color:TEXT_HOVER}} ><FaXTwitter /></Text></Link>
+              <Link href="#"><Text color={TEXT_COLOR} _hover={{ color:TEXT_HOVER}} ><FaLinkedin /></Text></Link>
             </Flex>
           </Box>
         </>

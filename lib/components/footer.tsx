@@ -53,8 +53,8 @@ const Footer = () => {
           <Flex flexDir={'column'} color={TEXT_COLOR} fontSize={TEXT_FONT_SIZE} gap={'10px'}>
             <Text fontSize={['18px','20px']} mb={'10px'}>FOLLOW US</Text>
             <Flex alignItems={'center'} gap={'10px'}>
-            <Link href="#" color="white"><Text color={TEXT_COLOR} p={'4px'}><FaFacebook fontSize={'25px'}/></Text></Link>
-            <Link href="#" color="white"><Text color={TEXT_COLOR}  ><FaTwitter  fontSize={'25px'} /></Text></Link>
+            <Link href="#" color="white"><Text color={TEXT_COLOR} p={'4px'} _hover={{ color:TEXT_HOVER}} ><FaFacebook fontSize={'25px'}/></Text></Link>
+            <Link href="#" color="white"><Text color={TEXT_COLOR} _hover={{ color:TEXT_HOVER}}  ><FaTwitter  fontSize={'25px'} /></Text></Link>
             </Flex>
           </Flex>
         </Flex>
@@ -65,8 +65,8 @@ const Footer = () => {
         <Flex flexDir={'column'}  gap={'20px'} justifyContent={'flex-start'} display={['none','flex']}>
         <Text fontSize={['18px','20px']}>FOLLOW US</Text>
         <Flex flexDir={'row'} gap={'10px'} justifyContent={'flex-start'} w={'35%'}alignItems={'center'}>
-            <Link href="#" color="white"><Text color={TEXT_COLOR} p={'4px'}><FaFacebook fontSize={'25px'}/></Text></Link>
-            <Link href="#" color="white"><Text color={TEXT_COLOR}  ><FaTwitter  fontSize={'25px'} /></Text></Link>
+            <Link href="#" color="white"><Text color={TEXT_COLOR} p={'4px'} _hover={{ color:TEXT_HOVER}} ><FaFacebook fontSize={'25px'}/></Text></Link>
+            <Link href="#" color="white"><Text color={TEXT_COLOR} _hover={{ color:TEXT_HOVER}} ><FaTwitter  fontSize={'25px'} /></Text></Link>
           </Flex>
           <Flex flexDir={'column'} fontSize={TEXT_FONT_SIZE}  gap={'10px'} >
             <Text >&copy; {year.getFullYear()} by QZ Sustainability</Text>
