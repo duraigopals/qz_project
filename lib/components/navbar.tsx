@@ -64,8 +64,6 @@ const Navbar = () => {
             </Flex>
             <Flex flexDir={'row'} gap={'20px'} alignItems={'center'}>
               <Link href="#" ><Text color={TEXT_COLOR} p={'4px'} _hover={{ color:TEXT_HOVER}}><FaFacebook fontSize={'25px'}/></Text></Link>
-              <Link href="#"><Text color={TEXT_COLOR}  _hover={{ color:TEXT_HOVER}}><FaInstagram fontSize={'25px'}/></Text></Link>
-              <Link href="#" ><Text color={HEADER_BG} borderRadius={'50%'} p={'4px'} borderWidth={'1px'} bg={'white'}  _hover={{ color:TEXT_HOVER}}><FaTwitter  fontSize={'15px'} /></Text></Link>
               <Link href="#"><Text color={HEADER_BG} borderRadius={'50%'} p={'4px'} borderWidth={'1px'} bg={'white'}  _hover={{ color:TEXT_HOVER}}><FaLinkedinIn  fontSize={'15px'}/></Text></Link>
             </Flex>
           </Flex>
@@ -125,8 +123,6 @@ const Navbar = () => {
           <Box   px={SECTION_PADDING_X} pb={'20px'} >
             <Flex gap={'20px'} flexDir={'row'} color={TEXT_COLOR} fontSize={TEXT_FONT_SIZE}>
               <Link href="#" ><Text color={TEXT_COLOR} _hover={{ color:TEXT_HOVER}} ><FaFacebook /></Text></Link>
-              <Link href="#"><Text color={TEXT_COLOR} _hover={{ color:TEXT_HOVER}} ><FaInstagram /></Text></Link>
-              <Link href="#"><Text color={TEXT_COLOR} _hover={{ color:TEXT_HOVER}} ><FaXTwitter /></Text></Link>
               <Link href="#"><Text color={TEXT_COLOR} _hover={{ color:TEXT_HOVER}} ><FaLinkedin /></Text></Link>
             </Flex>
           </Box>

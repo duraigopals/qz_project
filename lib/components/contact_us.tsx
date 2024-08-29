@@ -251,7 +251,7 @@ const ContactUs = ({color=TEXT_COLOR, bg=HEADER_BG}:fields) => {
           </GridItem>
           <GridItem colSpan={[4,2]}>
             <Flex justifyContent={['center','flex-end']}  h={'100%'} alignItems={'center'}>
-            <Button type='submit' maxW={'200px'} w={'100%'} maxH={'60px'} borderRadius={'0px'} isLoading = {loading} _hover = {{}} _focus={{}} >
+            <Button type='submit' cursor={loading ? 'wait' : 'pointer'} maxW={'200px'} w={'100%'} maxH={'60px'} borderRadius={'0px'} isLoading = {loading} _hover = {{}} _focus={{}} >
               { loading ? 
                 <Spinner
                   thickness='4px'

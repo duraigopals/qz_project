@@ -3,7 +3,7 @@ import { Box, Flex, GridItem, Heading, SimpleGrid, Stack, Text } from '@chakra-u
 import React from 'react'
 import { CONTENT_MAX_WIDTH, FOOTER_BG, HEADER_BG, TEXT_COLOR, TEXT_FONT_SIZE, TEXT_HOVER } from './app_constants';
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
-import { FaTwitter, FaXTwitter } from 'react-icons/fa6';
+import { FaLinkedinIn, FaTwitter, FaXTwitter } from 'react-icons/fa6';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -66,8 +66,7 @@ const Footer = () => {
         <Text fontSize={['18px','20px']}>FOLLOW US</Text>
         <Flex flexDir={'row'} gap={'10px'} justifyContent={'flex-start'} w={'35%'}alignItems={'center'}>
             <Link href="#" color="white"><Text color={TEXT_COLOR} p={'4px'} _hover={{ color:TEXT_HOVER}} ><FaFacebook fontSize={'25px'}/></Text></Link>
-            <Link href="#" color="white"><Text color={TEXT_COLOR} _hover={{ color:TEXT_HOVER}} ><FaTwitter  fontSize={'25px'} /></Text></Link>
-          </Flex>
+            <Link href="#"><Text color={HEADER_BG} borderRadius={'50%'} p={'4px'} borderWidth={'1px'} bg={'white'}  _hover={{ color:TEXT_HOVER}}><FaLinkedinIn  fontSize={'15px'}/></Text></Link>          </Flex>
           <Flex flexDir={'column'} fontSize={TEXT_FONT_SIZE}  gap={'10px'} >
             <Text >&copy; {year.getFullYear()} by QZ Sustainability</Text>
             <Text>All rights reserved.</Text>

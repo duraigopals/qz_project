@@ -34,7 +34,7 @@ const ProjectManagement = () => {
 
         <Flex maxW={CONTENT_MAX_WIDTH} flexDir={'column'} alignItems={'center'}   my={SECTION_MARGIN_Y} px={SECTION_PADDING_X} >
           <Heading textAlign={'center'} color={APP_BG} fontSize={SECTION_HEADING_FONT_SIZE}>Project Management</Heading>
-          <Heading textAlign={'center'} color={APP_BG} fontSize={SECTION_SUB_HEADING_FONT_SIZE} mb={SECTION_MARGIN_Y}>( Fit Outs, Refurbishment Projects )</Heading>
+          <Heading textAlign={'center'} color={APP_BG} fontSize={SECTION_SUB_HEADING_FONT_SIZE} mb={SECTION_MARGIN_Y}>( Fit Outs, Refurbishment Projects / Cap Ex Projects / Built Asset Upgrades / Modernisation )</Heading>
 
           <Flex flexDir={['column','column','column','row','row']} gap={'30px'}>
             <Flex position={'relative'} w={'100%'} h={'100%'} minH={'400px'} >
@@ -43,7 +43,6 @@ const ProjectManagement = () => {
             <Flex flexDir={'column'} w={'100%'} h={'100%'} gap={'10px'} fontSize={TEXT_FONT_SIZE}>
               <Text >Our expert project management service sets high standards of control and delivery to meet budget and programme targets for diverse construction projects. We work collaboratively with clients from initial concept through to completion and occupancy, providing innovative and value-added solutions to minimise risk and maximise investment returns.</Text>
               <Text >We draw on industry-leading thinking and our strong digital platform gives our project managers access to the most current project templates, project data, knowledge and standards.</Text>
-              <Text >Cap Ex Projects / Built Asset Upgrades / Modernisation </Text>
               <Text >This includes spendings on upgrading or enhancing the efficiency of existing assets, such as  Lifts, boilers, HVAC equipment, BMS, Switch boards , Plumbing fixtures,  or  CMMS networks, to boost their capacity or functionality. This may include adoption of new technology and modern solutions into the business.</Text>
             </Flex>
           </Flex>

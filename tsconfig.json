@@ -58,6 +58,8 @@
     "next/types/**/*.ts",
     "next/types/**/*.ts",
     "next/types/**/*.ts",
+    "next/types/**/*.ts",
+    "next/types/**/*.ts",
     "next/types/**/*.ts"
   ],
   "exclude": [
