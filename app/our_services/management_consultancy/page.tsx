@@ -1,10 +1,10 @@
-import ManagementConsultancy from '@/lib/components/management_consultancy'
+/* import ManagementConsultancy from '@/lib/components/management_consultancy' */
 import React from 'react'
 
 const Page = () => {
   return (
     <>
-      <ManagementConsultancy />
+      {/* <ManagementConsultancy /> */}
     </>
   )
 }

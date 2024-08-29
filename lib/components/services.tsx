@@ -15,7 +15,7 @@ const Services = () => {
         <Flex w={'100%'} h={'100%'} flexWrap={'wrap'} flexGrow={'1'} justifyContent={['center','center','space-between']} gap={'30px'}>
           <Flex   >
             <Flex h={'100%'} justifyContent={'center'}>
-              <Flex flexDir={'column'} borderWidth={'1px'} w={'265px'} minH={'350px'} h={'100%'} >
+              <Flex flexDir={'column'} borderWidth={'1px'} w={'300px'} minH={'350px'} h={'100%'} >
                 <Image alt='logo' src='/images/Assets Management.jpg' h={'100%'} loading='lazy' fallback={<Text>Loading...</Text>} onLoad={()=>console.log("eadinng..")}/>
                 {/* <Flex position={'relative'} mt={'20px'} w={'100%'} h='100%' minH={"400px"}>
                   <Image src={'/images/Assets Management.jpg'} priority={true} alt="logo" fill style={{ objectFit: 'contain' }} />
@@ -37,7 +37,7 @@ const Services = () => {
           </Flex>
           <Flex   justifyContent={'center'} >
             <Flex h={'100%'} justifyContent={'center'}>
-              <Flex flexDir={'column'} borderWidth={'1px'} w={'265px'}  h={'350px'} >
+              <Flex flexDir={'column'} borderWidth={'1px'} w={'300px'}  h={'350px'} >
                 <Image alt='' src='images/HR and ManPower.jpg' h={'100%'} />
 
                 {/* <Flex position={'relative'} mt={'20px'} w={'100%'} h='100%' minH={"400px"}>
@@ -59,7 +59,7 @@ const Services = () => {
           </Flex>
           <Flex justifyContent={'center'} >
             <Flex h={'100%'} justifyContent={'center'}>
-              <Flex flexDir={'column'} borderWidth={'1px'} w={'265px'}  minH={'350px'} h={'100%'} >
+              <Flex flexDir={'column'} borderWidth={'1px'} w={'300px'}  minH={'350px'} h={'100%'} >
                 <Image alt='' src='/images/Project Management.jpg' h={'100%'} />
 
                 {/* <Flex position={'relative'} mt={'20px'} w={'100%'} h='100%' minH={"400px"}>
@@ -81,7 +81,7 @@ const Services = () => {
           </Flex>
           <Flex  justifyContent={'center'} >
             <Flex h={'100%'} justifyContent={'center'}>
-              <Flex flexDir={'column'} borderWidth={'1px'} w={'265px'} minH={'350px'} h={'100%'} >
+              <Flex flexDir={'column'} borderWidth={'1px'} w={'300px'} minH={'350px'} h={'100%'} >
                 <Image alt='' src='/images/Facilities Management.jpg' h={'100%'} />
 
                 {/* <Flex position={'relative'} mt={'20px'} w={'100%'} h='100%' minH={"400px"}>
@@ -103,7 +103,7 @@ const Services = () => {
           </Flex>
           <Flex  justifyContent={'center'} >
             <Flex h={'100%'} justifyContent={'center'}>
-              <Flex flexDir={'column'} borderWidth={'1px'} w={'265px'} minH={'350px'} h={'100%'} >
+              <Flex flexDir={'column'} borderWidth={'1px'} w={'300px'} minH={'350px'} h={'100%'} >
                 <Image alt='' src='/images/Strata Maintanence.jpg' h={'100%'} />
 
                 {/* <Flex position={'relative'} mt={'20px'} w={'100%'} h='100%' minH={"400px"}>
@@ -125,7 +125,7 @@ const Services = () => {
           </Flex>
           <Flex  justifyContent={'center'} >
             <Flex h={'100%'} justifyContent={'center'}>
-              <Flex flexDir={'column'} borderWidth={'1px'} w={'265px'}  minH={'350px'} h={'100%'} >
+              <Flex flexDir={'column'} borderWidth={'1px'} w={'300px'}  minH={'350px'} h={'100%'} >
                 <Image alt='' src='/images/Sustainability.jpg' h={'100%'} />
 
                 {/* <Flex position={'relative'} mt={'20px'} w={'100%'} h='100%' minH={"400px"}>
@@ -146,15 +146,11 @@ const Services = () => {
             </Flex>
           </Flex>
 
-          <Flex  justifyContent={'center'} >
+          {/* <Flex  justifyContent={'center'} >
             <Flex h={'100%'} justifyContent={'center'}>
-              <Flex flexDir={'column'} borderWidth={'1px'} w={'265px'}  minH={'350px'} h={'100%'} >
+              <Flex flexDir={'column'} borderWidth={'1px'} w={'300px'}  minH={'350px'} h={'100%'} >
                 <Image alt='' src='/images/Asset_1.jpg' h={'100%'} />
 
-                {/* <Flex position={'relative'} mt={'20px'} w={'100%'} h='100%' minH={"400px"}>
-                  <Image src={'/images/HR and ManPower.jpg'} priority={true} alt="logo" fill style={{ objectFit: 'contain' }} />
-
-                </Flex> */}
                 <Flex color={'white'} flexDir={'column'} bg={HEADER_BG} h={'100%'} justifyContent={'space-evenly'} alignItems={'center'}>
                   <Flex flexDirection={'column'} alignItems={'center'} fontSize={'18px'} fontWeight={'700'}>
                     <Text >Management </Text>
@@ -168,16 +164,11 @@ const Services = () => {
               </Flex>
             </Flex>
           </Flex>
-
-          <Flex  justifyContent={'center'} visibility={'hidden'} display={['none','none','flex']}>
+ */}
+         {/*  <Flex  justifyContent={'center'} visibility={'hidden'} display={['none','none','flex']}>
             <Flex h={'100%'} justifyContent={'center'}>
-              <Flex flexDir={'column'} borderWidth={'1px'} w={'265px'}  minH={'350px'} h={'100%'} >
+              <Flex flexDir={'column'} borderWidth={'1px'} w={'300px'}  minH={'350px'} h={'100%'} >
                 <Image alt='' src='/images/Asset_1.jpg' h={'100%'} />
-
-                {/* <Flex position={'relative'} mt={'20px'} w={'100%'} h='100%' minH={"400px"}>
-                  <Image src={'/images/HR and ManPower.jpg'} priority={true} alt="logo" fill style={{ objectFit: 'contain' }} />
-
-                </Flex> */}
                 <Flex color={'white'} flexDir={'column'} bg={HEADER_BG} h={'100%'} justifyContent={'space-evenly'} alignItems={'center'}>
                   <Flex flexDirection={'column'} alignItems={'center'} fontSize={'18px'} fontWeight={'700'}>
                     <Text >Management </Text>
@@ -190,7 +181,7 @@ const Services = () => {
                 </Flex>
               </Flex>
             </Flex>
-          </Flex>
+          </Flex> */}
         </Flex>
 
         <Flex mt={'30px'} >
@@ -202,11 +193,9 @@ const Services = () => {
               <ListItem>Promote trained manpower business for UGHR India/ dubai</ListItem>
               <ListItem>Training in jv with Edutech</ListItem>
               <ListItem>FM Consultancy services for pre and post contract, condition assessment etc.</ListItem>
-              <ListItem>Asset mgt and sustainable solutions advisory services-</ListItem>
+              <ListItem>Asset Management and sustainable solutions advisory services-</ListItem>
               <ListItem>NABERS /GBCA/WELL RATING / ENERGY MGT and ISO Standards </ListItem>
-              <ListItem>Strata mgt maintenance and refurbishment of properties</ListItem>
-              <ListItem>What is required- if available an office with 2 laptops / wifi / ABN and some initial funds...</ListItem>
-              <ListItem>website/ official email – outlook</ListItem>
+              <ListItem>Strata Management maintenance and refurbishment of properties</ListItem>
               <ListItem>Condition audits and asset registers </ListItem>
               <ListItem>Facilities management procurement and negotiation -</ListItem>
               <ListItem>Defect liability management </ListItem>

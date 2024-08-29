@@ -55,8 +55,8 @@ const Navbar = () => {
                     <Link href='/our_services/strata_maintenance'><Text color={pathname == '/our_services/strata_maintenance' ? HEADER_BG : 'black'}  _hover={{ color:TEXT_HOVER}}>Strata Maintenance</Text></Link></MenuItem>
                     <MenuItem>
                     <Link href='/our_services/sustainability_service'><Text color={pathname == '/our_services/sustainability_service' ? HEADER_BG : 'black'}  _hover={{ color:TEXT_HOVER}}>Sustainability Solutions Advice</Text></Link></MenuItem>
-                    <MenuItem>
-                    <Link href='/our_services/management_consultancy'><Text color={pathname == '/our_services/sustainability_service' ? HEADER_BG : 'black'}  _hover={{ color:TEXT_HOVER}}>Management Consultancy</Text></Link></MenuItem>
+                   {/*  <MenuItem>
+                    <Link href='/our_services/management_consultancy'><Text color={pathname == '/our_services/management_consultancy' ? HEADER_BG : 'black'}  _hover={{ color:TEXT_HOVER}}>Management Consultancy</Text></Link></MenuItem> */}
                   </MenuList>
                 </Menu>
               </Flex>
@@ -112,8 +112,8 @@ const Navbar = () => {
                     <Link href='/our_services/strata_maintenance'><Text color={pathname == '/our_services/strata_maintenance' ? HEADER_BG : 'black'}  _hover={{ color:TEXT_HOVER}}>Strata Maintenance</Text></Link></MenuItem>
                     <MenuItem>
                     <Link href='/our_services/sustainability_service'><Text color={pathname == '/our_services/sustainability_service' ? HEADER_BG : 'black'}  _hover={{ color:TEXT_HOVER}}>Sustainability Solutions Advice</Text></Link></MenuItem>
-                    <MenuItem>
-                    <Link href='/our_services/management_consultancy'><Text color={pathname == '/our_services/sustainability_service' ? HEADER_BG : 'black'}  _hover={{ color:TEXT_HOVER}}>Management Consultancy</Text></Link></MenuItem>
+                    {/* <MenuItem>
+                    <Link href='/our_services/management_consultancy'><Text color={pathname == '/our_services/management_consultancy' ? HEADER_BG : 'black'}  _hover={{ color:TEXT_HOVER}}>Management Consultancy</Text></Link></MenuItem> */}
                   </MenuList>
                 </Menu>
               </Flex>

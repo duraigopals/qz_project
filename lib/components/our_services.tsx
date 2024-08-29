@@ -21,7 +21,7 @@ const OurServices = () => {
     }, 3000);
   }, [])
 
-  /* if(loading){
+  if(loading){
     return(
       <Flex h={'100vh'} w={'100vw'} bg={'white'} justifyContent={'center'} alignItems={'center'}>
       <Spinner
@@ -35,7 +35,7 @@ const OurServices = () => {
       />
     </Flex>
     )
-  } */
+  }
 
   return (
     <Flex flexDir={'column'}>

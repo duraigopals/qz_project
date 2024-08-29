@@ -1,4 +1,4 @@
-
+/* 
 "use client"
 import { Flex, Heading, ListItem, Spinner, Text, UnorderedList } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react'
@@ -71,3 +71,4 @@ const ManagementConsultancy = () => {
 
 export default ManagementConsultancy
 
+ */
