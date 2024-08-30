@@ -191,7 +191,6 @@ const Services = () => {
             <UnorderedList spacing={1} fontSize={TEXT_FONT_SIZE} fontWeight={400} >
               <ListItem>Employment Service provider for Govt agencies HR, settlement, students advice, and career coaching</ListItem>
               <ListItem>Promote trained manpower business for UGHR India/ dubai</ListItem>
-              <ListItem>Training in jv with Edutech</ListItem>
               <ListItem>FM Consultancy services for pre and post contract, condition assessment etc.</ListItem>
               <ListItem>Asset Management and sustainable solutions advisory services-</ListItem>
               <ListItem>NABERS /GBCA/WELL RATING / ENERGY MGT and ISO Standards </ListItem>
