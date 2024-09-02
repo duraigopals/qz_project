@@ -48,7 +48,7 @@ const AboutUs = () => {
           </Flex>*/}
 
           <Flex position={'relative'} w={'100%'} h={'100%'} minH={'400px'}  order={[1,1,2]}>
-            <Image src={'/images/About Us.jpg'}  alt="logo"  style={{ objectFit: 'cover' }} />
+            <Image src={'/images/About Us.webp'}  alt="logo"  style={{ objectFit: 'cover' }} />
           </Flex>
         </Flex>
       </Flex>

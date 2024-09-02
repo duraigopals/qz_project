@@ -38,7 +38,7 @@ const ManagementConsultancy = () => {
 
           <Flex flexDir={['column','column','column','row','row']} gap={'30px'}>
             <Flex position={'relative'} w={'100%'} h={'100%'} minH={'400px'} >
-              <Image src = {'/images/Asset_1.jpg'} priority = {true} alt="logo" fill style = {{ objectFit: 'cover' }} />
+              <Image src = {'/images/Asset_1.webp'} priority = {true} alt="logo" fill style = {{ objectFit: 'cover' }} />
             </Flex>
 
             <Flex flexDir={'column'}  fontSize={TEXT_FONT_SIZE}  gap={'10px'} w={'100%'} h={'100%'} >

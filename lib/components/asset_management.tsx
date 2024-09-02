@@ -57,13 +57,13 @@ const AssetManagement = () => {
                 </Flex>
               </Flex>
               <Flex w={['100%','100%','50%']} order={[1,1,2]}>
-                {/* <Flex maxW={'1100px'} h={'500px'} w={'100%'}  backgroundImage={'/images/asset_management1.jpg'} backgroundPosition={'center'} backgroundSize={'cover'} backgroundRepeat={'no-repeat'}>
+                {/* <Flex maxW={'1100px'} h={'500px'} w={'100%'}  backgroundImage={'/images/asset_management1.webp'} backgroundPosition={'center'} backgroundSize={'cover'} backgroundRepeat={'no-repeat'}>
                 </Flex> */}
                 <Flex flexDir={'column'} h={'100%'} w={'100%'} gap={['20px','20px','40px']}>
                   <Heading  display={['flex','flex','none']} fontSize={LIST_HEADING_FONT_SIZE}>Asset & Facilities Management Business Processes</Heading>
 
                   <Flex position={'relative'} w={'100%'} h={'100%'} minH={'400px'} order={[1,1,2]}>
-                    <Image src={'/images/Asset_1.jpg'} priority={true} alt="logo" fill style={{ objectFit: 'fill'}} />
+                    <Image src={'/images/Asset_1.webp'} priority={true} alt="logo" fill style={{ objectFit: 'fill'}} />
                   </Flex>
                 </Flex>
               </Flex>
@@ -72,17 +72,17 @@ const AssetManagement = () => {
               <Flex flexDir={['column','column','row']}  gap={['20px','20px','40px']}>
 
                 <Flex w={['100%','100%','50%']} >
-                {/*  <Flex maxW={'1100px'} h={'400px'} w={'100%'} backgroundImage={'/images/standard-quality-control-concept-m.jpg'} backgroundPosition={'center'} backgroundSize={'cover'} backgroundRepeat={'no-repeat'}>
+                {/*  <Flex maxW={'1100px'} h={'400px'} w={'100%'} backgroundImage={'/images/standard-quality-control-concept-m.webp'} backgroundPosition={'center'} backgroundSize={'cover'} backgroundRepeat={'no-repeat'}>
                   </Flex> */}
 
                   <Flex position={'relative'} w={'100%'} h={'100%'} minH={'400px'}>
-                    <Image src={'/images/Information Systems.jpg'} priority={true} alt="logo" fill style={{ objectFit: 'fill' }} />
+                    <Image src={'/images/Information Systems.webp'} priority={true} alt="logo" fill style={{ objectFit: 'fill' }} />
                   </Flex>
                 </Flex>
                 <Flex w={['100%','100%','50%']}>
                   <Flex flexDir={'column'}  w={'100%'} height={'100%'} gap={'20px'} >
                     <Flex flexDir={'column'}   gap={'10px'} >
-                     <Heading fontSize={LIST_HEADING_FONT_SIZE}>Cmms / Information Systems</Heading>
+                     <Heading fontSize={LIST_HEADING_FONT_SIZE}>CMMS / EAMS / INFORMATION SYSTEMS</Heading>
                       <UnorderedList fontSize={TEXT_FONT_SIZE}>
                         <ListItem >Information Systems Review</ListItem>
                         <ListItem>System Functional Specification</ListItem>
@@ -130,11 +130,11 @@ const AssetManagement = () => {
                 </Flex>
               </Flex>
               <Flex w={['100%','100%','50%']} order={[1,1,2]}>
-              {/* <Flex maxW={'1100px'} h={'400px'} w={'100%'}  backgroundImage={'/images/succesful-business-man-presenting-good-evolution-company-using-digital-tablet.jpg'} backgroundPosition={'center'} backgroundSize={'cover'} backgroundRepeat={'no-repeat'}>
+              {/* <Flex maxW={'1100px'} h={'400px'} w={'100%'}  backgroundImage={'/images/succesful-business-man-presenting-good-evolution-company-using-digital-tablet.webp'} backgroundPosition={'center'} backgroundSize={'cover'} backgroundRepeat={'no-repeat'}>
               </Flex> */}
 
                 <Flex position={'relative'} w={'100%'} h={'100%'} minH={'400px'} order={[3,3,4]}>
-                  <Image src={'/images/Facilities Management.jpg'} priority={true} alt="logo" fill style={{ objectFit: 'fill' }} />
+                  <Image src={'/images/Facilities Management.webp'} priority={true} alt="logo" fill style={{ objectFit: 'fill' }} />
                 </Flex>
               </Flex>
               </Flex>

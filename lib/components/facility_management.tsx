@@ -53,12 +53,12 @@ const FacilityManagement = () => {
                 </Flex>
               </Flex>
               <Flex w={['100%','100%','50%']} order={[1,1,2]}>
-                {/* <Flex maxW={'1100px'} minH={'400px'} w={'100%'} h={'100%'} backgroundImage={'/images/front-view-work-process-two-busy-businessmen-working-office.jpg'} backgroundPosition={'center'} backgroundSize={'cover'} backgroundRepeat={'no-repeat'}>
+                {/* <Flex maxW={'1100px'} minH={'400px'} w={'100%'} h={'100%'} backgroundImage={'/images/front-view-work-process-two-busy-businessmen-working-office.webp'} backgroundPosition={'center'} backgroundSize={'cover'} backgroundRepeat={'no-repeat'}>
                     </Flex> */}
                 <Flex flexDir={'column'} h={'100%'} w={'100%'} gap={['20px','20px','40px']}>
                   <Heading  display={['flex','flex','none']} fontSize={LIST_HEADING_FONT_SIZE}>Maintenance Management Consultancy Services</Heading>
                   <Flex position={'relative'} w={'100%'} h={'100%'} minH={'400px'}>
-                    <Image src={'/images/Facility_1.jpg'} priority={true} alt="logo" fill style={{ objectFit: 'fill' }} />
+                    <Image src={'/images/Facility_1.webp'} priority={true} alt="logo" fill style={{ objectFit: 'fill' }} />
                   </Flex>
                 </Flex>
               </Flex>
@@ -66,12 +66,12 @@ const FacilityManagement = () => {
 
             <Flex flexDir={['column','column','row']}  gap={['20px','20px','40px']}>
               <Flex w={['100%','100%','50%']} h={'100%'}>
-                {/* <Flex maxW={'1100px'} minH={'400px'} w={'100%'} h={'100%'} backgroundImage={'/images/content-businesspeople-watching-data-tablet-screen.jpg'} backgroundPosition={'center'} backgroundSize={'cover'} backgroundRepeat={'no-repeat'}>
+                {/* <Flex maxW={'1100px'} minH={'400px'} w={'100%'} h={'100%'} backgroundImage={'/images/content-businesspeople-watching-data-tablet-screen.webp'} backgroundPosition={'center'} backgroundSize={'cover'} backgroundRepeat={'no-repeat'}>
                 </Flex> */}
                 <Flex flexDir={'column'} h={'100%'} w={'100%'} gap={['20px','20px','40px']}>
                   <Heading  display={['flex','flex','none']} fontSize={LIST_HEADING_FONT_SIZE}>Due Diligence and Pre-Purchase Inspection Studies</Heading>
                   <Flex position={'relative'} w={'100%'} h={'100%'} minH={'400px'}>
-                    <Image src={'/images/Sustainability.jpg'} priority={true} alt="logo" fill style={{ objectFit: 'fill' }} />
+                    <Image src={'/images/Sustainability.webp'} priority={true} alt="logo" fill style={{ objectFit: 'fill' }} />
                   </Flex>
                 </Flex>
               </Flex>
@@ -91,12 +91,12 @@ const FacilityManagement = () => {
                 </Flex>
               </Flex>
               <Flex w={['100%','100%','50%']} order={[1,1,2]}>
-                {/* <Flex maxW={'1100px'} minH={'400px'} w={'100%'} h={'100%'} backgroundImage={'/images/view-woman-working-as-economist.jpg'} backgroundPosition={'center'} backgroundSize={'cover'} backgroundRepeat={'no-repeat'}>
+                {/* <Flex maxW={'1100px'} minH={'400px'} w={'100%'} h={'100%'} backgroundImage={'/images/view-woman-working-as-economist.webp'} backgroundPosition={'center'} backgroundSize={'cover'} backgroundRepeat={'no-repeat'}>
                 </Flex> */}
                 <Flex flexDir={'column'} h={'100%'} w={'100%'} gap={['20px','20px','40px']}>
                   <Heading  display={['flex','flex','none']} fontSize={LIST_HEADING_FONT_SIZE}>Due Diligence and Pre-Purchase Inspection Studies</Heading>
                   <Flex position={'relative'} w={'100%'} h={'100%'} minH={'400px'}>
-                    <Image src={'/images/Strata Maintanence.jpg'} priority={true} alt="logo" fill style={{ objectFit: 'fill' }} />
+                    <Image src={'/images/Strata Maintanence.webp'} priority={true} alt="logo" fill style={{ objectFit: 'fill' }} />
                   </Flex>
                 </Flex>
               </Flex>

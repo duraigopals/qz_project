@@ -16,9 +16,9 @@ const Services = () => {
           <Flex   >
             <Flex h={'100%'} justifyContent={'center'}>
               <Flex flexDir={'column'} borderWidth={'1px'} w={'300px'} minH={'350px'} h={'100%'} >
-                <Image alt='logo' src='/images/Assets Management.jpg' h={'100%'} loading='lazy' fallback={<Text>Loading...</Text>} onLoad={()=>console.log("eadinng..")}/>
+                <Image alt='logo' src='/images/Assets Management.webp' h={'100%'} loading='lazy' fallback={<Text>Loading...</Text>} onLoad={()=>console.log("eadinng..")}/>
                 {/* <Flex position={'relative'} mt={'20px'} w={'100%'} h='100%' minH={"400px"}>
-                  <Image src={'/images/Assets Management.jpg'} priority={true} alt="logo" fill style={{ objectFit: 'contain' }} />
+                  <Image src={'/images/Assets Management.webp'} priority={true} alt="logo" fill style={{ objectFit: 'contain' }} />
 
                 </Flex> */}
                 <Flex color={'white'} flexDir={'column'} bg={HEADER_BG} h={'100%'} justifyContent={'space-evenly'} alignItems={'center'}>
@@ -38,10 +38,10 @@ const Services = () => {
           <Flex   justifyContent={'center'} >
             <Flex h={'100%'} justifyContent={'center'}>
               <Flex flexDir={'column'} borderWidth={'1px'} w={'300px'}  h={'350px'} >
-                <Image alt='' src='images/HR and ManPower.jpg' h={'100%'} />
+                <Image alt='' src='images/HR and ManPower.webp' h={'100%'} />
 
                 {/* <Flex position={'relative'} mt={'20px'} w={'100%'} h='100%' minH={"400px"}>
-                  <Image src={'/images/HR and ManPower.jpg'} priority={true} alt="logo" fill style={{ objectFit: 'contain' }} />
+                  <Image src={'/images/HR and ManPower.webp'} priority={true} alt="logo" fill style={{ objectFit: 'contain' }} />
 
                 </Flex> */}
                 <Flex color={'white'} flexDir={'column'} bg={HEADER_BG} h={'100%'} justifyContent={'space-evenly'} alignItems={'center'}>
@@ -60,10 +60,10 @@ const Services = () => {
           <Flex justifyContent={'center'} >
             <Flex h={'100%'} justifyContent={'center'}>
               <Flex flexDir={'column'} borderWidth={'1px'} w={'300px'}  minH={'350px'} h={'100%'} >
-                <Image alt='' src='/images/Project Management.jpg' h={'100%'} />
+                <Image alt='' src='/images/Project Management.webp' h={'100%'} />
 
                 {/* <Flex position={'relative'} mt={'20px'} w={'100%'} h='100%' minH={"400px"}>
-                  <Image src={'/images/HR and ManPower.jpg'} priority={true} alt="logo" fill style={{ objectFit: 'contain' }} />
+                  <Image src={'/images/HR and ManPower.webp'} priority={true} alt="logo" fill style={{ objectFit: 'contain' }} />
 
                 </Flex> */}
                 <Flex color={'white'} flexDir={'column'} bg={HEADER_BG} h={'100%'} justifyContent={'space-evenly'} alignItems={'center'}>
@@ -82,10 +82,10 @@ const Services = () => {
           <Flex  justifyContent={'center'} >
             <Flex h={'100%'} justifyContent={'center'}>
               <Flex flexDir={'column'} borderWidth={'1px'} w={'300px'} minH={'350px'} h={'100%'} >
-                <Image alt='' src='/images/Facilities Management.jpg' h={'100%'} />
+                <Image alt='' src='/images/Facilities Management.webp' h={'100%'} />
 
                 {/* <Flex position={'relative'} mt={'20px'} w={'100%'} h='100%' minH={"400px"}>
-                  <Image src={'/images/HR and ManPower.jpg'} priority={true} alt="logo" fill style={{ objectFit: 'contain' }} />
+                  <Image src={'/images/HR and ManPower.webp'} priority={true} alt="logo" fill style={{ objectFit: 'contain' }} />
 
                 </Flex> */}
                 <Flex color={'white'} flexDir={'column'} bg={HEADER_BG} h={'100%'} justifyContent={'space-evenly'} alignItems={'center'}>
@@ -104,10 +104,10 @@ const Services = () => {
           <Flex  justifyContent={'center'} >
             <Flex h={'100%'} justifyContent={'center'}>
               <Flex flexDir={'column'} borderWidth={'1px'} w={'300px'} minH={'350px'} h={'100%'} >
-                <Image alt='' src='/images/Strata Maintanence.jpg' h={'100%'} />
+                <Image alt='' src='/images/Strata Maintanence.webp' h={'100%'} />
 
                 {/* <Flex position={'relative'} mt={'20px'} w={'100%'} h='100%' minH={"400px"}>
-                  <Image src={'/images/HR and ManPower.jpg'} priority={true} alt="logo" fill style={{ objectFit: 'contain' }} />
+                  <Image src={'/images/HR and ManPower.webp'} priority={true} alt="logo" fill style={{ objectFit: 'contain' }} />
 
                 </Flex> */}
                 <Flex color={'white'} flexDir={'column'} bg={HEADER_BG} h={'100%'} justifyContent={'space-evenly'} alignItems={'center'}>
@@ -126,10 +126,10 @@ const Services = () => {
           <Flex  justifyContent={'center'} >
             <Flex h={'100%'} justifyContent={'center'}>
               <Flex flexDir={'column'} borderWidth={'1px'} w={'300px'}  minH={'350px'} h={'100%'} >
-                <Image alt='' src='/images/Sustainability.jpg' h={'100%'} />
+                <Image alt='' src='/images/Sustainability.webp' h={'100%'} />
 
                 {/* <Flex position={'relative'} mt={'20px'} w={'100%'} h='100%' minH={"400px"}>
-                  <Image src={'/images/HR and ManPower.jpg'} priority={true} alt="logo" fill style={{ objectFit: 'contain' }} />
+                  <Image src={'/images/HR and ManPower.webp'} priority={true} alt="logo" fill style={{ objectFit: 'contain' }} />
 
                 </Flex> */}
                 <Flex color={'white'} flexDir={'column'} bg={HEADER_BG} h={'100%'} justifyContent={'space-evenly'} alignItems={'center'}>
@@ -149,7 +149,7 @@ const Services = () => {
           {/* <Flex  justifyContent={'center'} >
             <Flex h={'100%'} justifyContent={'center'}>
               <Flex flexDir={'column'} borderWidth={'1px'} w={'300px'}  minH={'350px'} h={'100%'} >
-                <Image alt='' src='/images/Asset_1.jpg' h={'100%'} />
+                <Image alt='' src='/images/Asset_1.webp' h={'100%'} />
 
                 <Flex color={'white'} flexDir={'column'} bg={HEADER_BG} h={'100%'} justifyContent={'space-evenly'} alignItems={'center'}>
                   <Flex flexDirection={'column'} alignItems={'center'} fontSize={'18px'} fontWeight={'700'}>
@@ -168,7 +168,7 @@ const Services = () => {
          {/*  <Flex  justifyContent={'center'} visibility={'hidden'} display={['none','none','flex']}>
             <Flex h={'100%'} justifyContent={'center'}>
               <Flex flexDir={'column'} borderWidth={'1px'} w={'300px'}  minH={'350px'} h={'100%'} >
-                <Image alt='' src='/images/Asset_1.jpg' h={'100%'} />
+                <Image alt='' src='/images/Asset_1.webp' h={'100%'} />
                 <Flex color={'white'} flexDir={'column'} bg={HEADER_BG} h={'100%'} justifyContent={'space-evenly'} alignItems={'center'}>
                   <Flex flexDirection={'column'} alignItems={'center'} fontSize={'18px'} fontWeight={'700'}>
                     <Text >Management </Text>
@@ -187,7 +187,7 @@ const Services = () => {
         <Flex mt={'30px'} >
           <Flex w={'100%'}  flexDir={'column'} gap={'20px'} pb={'20px'} >
             <Heading fontSize={['16px', '18px']} fontWeight={700}>Our Experienced team of experts establish and implement solutions for the delivery of property and facilities management services in accordance with ISO55000 (Asset Management) and ISO41000 (Facilities Management).</Heading>
-            <Heading fontSize={['16px', '18px']} fontWeight={700}>Standards and compliance: ISO/IIAM/ CIBSE/BCA/NCC/DDA/</Heading>
+            <Heading fontSize={['16px', '18px']} fontWeight={700}>Standards and compliance: ISO/ IAM/ CIBSE/ BCA/ NCC/ DDA</Heading>
             <UnorderedList spacing={1} fontSize={TEXT_FONT_SIZE} fontWeight={400} >
               <ListItem>Employment Service provider for Govt agencies HR, settlement, students advice, and career coaching</ListItem>
               <ListItem>Promote trained manpower business for UGHR India/ dubai</ListItem>

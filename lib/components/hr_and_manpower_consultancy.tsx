@@ -40,7 +40,7 @@ const HRManPowerConsultancy = () => {
 
           <Flex flexDir={['column','column','column','row','row']} gap={'30px'}>
             <Flex position={'relative'} w={'100%'} h={'100%'} minH={'400px'} >
-              <Image src = {'/images/HR and ManPower.jpg'} priority = {true} alt="logo" fill style = {{ objectFit: 'cover' }} />
+              <Image src = {'/images/HR and ManPower.webp'} priority = {true} alt="logo" fill style = {{ objectFit: 'cover' }} />
             </Flex>
             <Flex flexDir={'column'} w={'100%'} h={'100%'} gap={'10px'} fontSize={TEXT_FONT_SIZE}>
               <Text >We have a Strategic alliance between us and UGHR, India and Dubai and assist in promoting the trained manpower business for the APAC Region / ANC.</Text>

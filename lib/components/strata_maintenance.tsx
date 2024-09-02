@@ -37,7 +37,7 @@ const StrataMaintenance = () => {
 
           <Flex flexDir={['column','column','column','row','row']} gap={'30px'}>
             <Flex position={'relative'} w={'100%'} h={'100%'} minH={'400px'} >
-              <Image src = {'/images/Strata Maintanence.jpg'} priority = {true} alt="logo" fill style = {{ objectFit: 'cover' }} />
+              <Image src = {'/images/Strata Maintanence.webp'} priority = {true} alt="logo" fill style = {{ objectFit: 'cover' }} />
             </Flex>
             <Flex flexDir={'column'} w={'100%'} h={'100%'} gap={'10px'} fontSize={TEXT_FONT_SIZE}>
               <Text >For repairs and maintenance in a strata scheme, as a general rule the owner’s corporation are responsible for common property and the owners must deal with anything within their lot. Owner’s corporations have a positive legal responsibility to keep common property in good order and repair.  We can provide defects reports, technical due diligence to strata committee and quote for yearly maintenance of building services.</Text>

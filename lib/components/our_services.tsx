@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { Flex, GridItem, Heading, SimpleGrid, Image, Text, UnorderedList, ListItem, Button, Spinner } from '@chakra-ui/react';
 
-import image from '../../public/images/Business Meeting of Two Men Walking in the Hall.jpg'
+import image from '../../public/images/Business Meeting of Two Men Walking in the Hall.webp'
 import Link from 'next/link';
 import { HEADER_BG } from './app_constants';
 import { useRouter } from 'next/navigation';

@@ -34,11 +34,11 @@ const ProjectManagement = () => {
 
         <Flex maxW={CONTENT_MAX_WIDTH} flexDir={'column'} alignItems={'center'}   my={SECTION_MARGIN_Y} px={SECTION_PADDING_X} >
           <Heading textAlign={'center'} color={APP_BG} fontSize={SECTION_HEADING_FONT_SIZE}>Project Management</Heading>
-          <Heading textAlign={'center'} color={APP_BG} fontSize={SECTION_SUB_HEADING_FONT_SIZE} mb={SECTION_MARGIN_Y}>( Fit Outs, Refurbishment Projects / Cap Ex Projects / Built Asset Upgrades / Modernisation )</Heading>
+          <Heading textAlign={'center'} color={APP_BG} fontSize={SECTION_SUB_HEADING_FONT_SIZE} mb={SECTION_MARGIN_Y}>( Fit Outs, Refurbishment Projects / CAPEX Projects / Built Asset Upgrades / Modernisation )</Heading>
 
           <Flex flexDir={['column','column','column','row','row']} gap={'30px'}>
             <Flex position={'relative'} w={'100%'} h={'100%'} minH={'400px'} >
-              <Image src = {'/images/Project Management.jpg'} priority = {true} alt="logo" fill style = {{ objectFit: 'cover' }} />
+              <Image src = {'/images/Project Management.webp'} priority = {true} alt="logo" fill style = {{ objectFit: 'cover' }} />
             </Flex>
             <Flex flexDir={'column'} w={'100%'} h={'100%'} gap={'10px'} fontSize={TEXT_FONT_SIZE}>
               <Text >Our expert project management service sets high standards of control and delivery to meet budget and programme targets for diverse construction projects. We work collaboratively with clients from initial concept through to completion and occupancy, providing innovative and value-added solutions to minimise risk and maximise investment returns.</Text>
